@@ -4,8 +4,67 @@
     <packageImport xmi:type="uml:PackageImport" xmi:id="_oHcIIEBEEemMKOXnh87AKA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
     </packageImport>
-    <packagedElement xmi:type="uml:StateMachine" xmi:id="_oCJYcEBEEemMKOXnh87AKA" name="StateMachine1">
-      <region xmi:type="uml:Region" xmi:id="_oCJ_gEBEEemMKOXnh87AKA" name="Region1"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_oCJYcEBEEemMKOXnh87AKA" name="TrainingAssetsTransitions">
+      <region xmi:type="uml:Region" xmi:id="_oCJ_gEBEEemMKOXnh87AKA" name="TrainingOfferTransition">
+        <transition xmi:type="uml:Transition" xmi:id="_NO41QEDcEemMKOXnh87AKA" name="publish" source="_d-1Z0EDbEemMKOXnh87AKA" target="_fTs7AEDbEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_nUuVsEDcEemMKOXnh87AKA" name="startTraining" source="_fTs7AEDbEemMKOXnh87AKA" target="_CCgcYEDcEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_4xw0UEDcEemMKOXnh87AKA" name="close" source="_CCgcYEDcEemMKOXnh87AKA" target="_27JQ8EDcEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_ahOYkEDdEemMKOXnh87AKA" name="startTraining" source="_CCgcYEDcEemMKOXnh87AKA" target="_CCgcYEDcEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_LjVfUEEREemMKOXnh87AKA" source="_27JQ8EDcEemMKOXnh87AKA" target="_DfCRsEEREemMKOXnh87AKA"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_d-1Z0EDbEemMKOXnh87AKA" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_fTs7AEDbEemMKOXnh87AKA" name="published"/>
+        <subvertex xmi:type="uml:State" xmi:id="_CCgcYEDcEemMKOXnh87AKA" name="published"/>
+        <subvertex xmi:type="uml:State" xmi:id="_27JQ8EDcEemMKOXnh87AKA" name="closed"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_DfCRsEEREemMKOXnh87AKA" name="FinalState9"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_w--cYED7EemMKOXnh87AKA" name="TrainingTransitions">
+        <transition xmi:type="uml:Transition" xmi:id="_EebwoED6EemMKOXnh87AKA" name="startTraining" source="_8s28oED3EemMKOXnh87AKA" target="_UEfU8ED5EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_FEtGcED6EemMKOXnh87AKA" source="_UEfU8ED5EemMKOXnh87AKA" target="_3uAyIED5EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Fl1dkED6EemMKOXnh87AKA" source="_UEfU8ED5EemMKOXnh87AKA" target="_8PgAUED5EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_hbvikED8EemMKOXnh87AKA" name="submitApplicationForTraining" source="_1s450ED3EemMKOXnh87AKA" target="_5juMAED4EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_koUzUED8EemMKOXnh87AKA" name="accepCandidateApplication" source="_5juMAED4EemMKOXnh87AKA" target="_Lie3oED5EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_qjysMED8EemMKOXnh87AKA" name="fundTraining" source="_Lie3oED5EemMKOXnh87AKA" target="_8s28oED3EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_IIhlUEEREemMKOXnh87AKA" source="_8PgAUED5EemMKOXnh87AKA" target="_DKTX0EEREemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_ItGSAEEREemMKOXnh87AKA" source="_3uAyIED5EemMKOXnh87AKA" target="_DKTX0EEREemMKOXnh87AKA"/>
+        <subvertex xmi:type="uml:State" xmi:id="_Lie3oED5EemMKOXnh87AKA" name="candidateAccepted"/>
+        <subvertex xmi:type="uml:State" xmi:id="_8s28oED3EemMKOXnh87AKA" name="funded"/>
+        <subvertex xmi:type="uml:State" xmi:id="_UEfU8ED5EemMKOXnh87AKA" name="InProgress"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_1s450ED3EemMKOXnh87AKA" name="Initial9"/>
+        <subvertex xmi:type="uml:State" xmi:id="_3uAyIED5EemMKOXnh87AKA" name="succeded"/>
+        <subvertex xmi:type="uml:State" xmi:id="_8PgAUED5EemMKOXnh87AKA" name="failed"/>
+        <subvertex xmi:type="uml:State" xmi:id="_5juMAED4EemMKOXnh87AKA" name="applicationSubmitted"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_DKTX0EEREemMKOXnh87AKA" name="FinalState14"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_XLHK0ED9EemMKOXnh87AKA" name="CandadidateTransitions">
+        <transition xmi:type="uml:Transition" xmi:id="_QgAIQED-EemMKOXnh87AKA" name="create" source="_ibNmEED9EemMKOXnh87AKA" target="_jk2usED9EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_SYCn8ED-EemMKOXnh87AKA" name="disable" source="_jk2usED9EemMKOXnh87AKA" target="_mIyrEED9EemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_d03V8EEREemMKOXnh87AKA" source="_mIyrEED9EemMKOXnh87AKA" target="_CgVNwEEREemMKOXnh87AKA"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_ibNmEED9EemMKOXnh87AKA" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jk2usED9EemMKOXnh87AKA" name="enabbled"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mIyrEED9EemMKOXnh87AKA" name="disabled"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_CgVNwEEREemMKOXnh87AKA" name="FinalState6"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_5dQI4ED-EemMKOXnh87AKA" name="JobApplicationTransitions">
+        <transition xmi:type="uml:Transition" xmi:id="_l7DZ8EEREemMKOXnh87AKA" name="hireCandidate" source="_oqsXYEEOEemMKOXnh87AKA" target="__4VtQEEPEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_mU6EYEEREemMKOXnh87AKA" name="closeJobApplication" source="_oqsXYEEOEemMKOXnh87AKA" target="_wICn0EEQEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_mzpO0EEREemMKOXnh87AKA" source="__4VtQEEPEemMKOXnh87AKA" target="_1gX-cEEQEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_nPXhgEEREemMKOXnh87AKA" source="_wICn0EEQEemMKOXnh87AKA" target="_1gX-cEEQEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_018r8EEREemMKOXnh87AKA" name="submitJobApplication" source="_hkyrsEEOEemMKOXnh87AKA" target="_oqsXYEEOEemMKOXnh87AKA"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_hkyrsEEOEemMKOXnh87AKA" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_oqsXYEEOEemMKOXnh87AKA" name="jobApplicationsubmitted"/>
+        <subvertex xmi:type="uml:State" xmi:id="__4VtQEEPEemMKOXnh87AKA" name="jobApplicationAccepted"/>
+        <subvertex xmi:type="uml:State" xmi:id="_wICn0EEQEemMKOXnh87AKA" name="jobApplicationClosed"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_1gX-cEEQEemMKOXnh87AKA" name="FinalState5"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_OQRKMEESEemMKOXnh87AKA" name="HiringRecordTransactions">
+        <transition xmi:type="uml:Transition" xmi:id="_oqMugEEWEemcebdzydyR0g" name="hireCandidate" source="_drYX4EETEemMKOXnh87AKA" target="_o9Ri4EETEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_pREhQEEWEemcebdzydyR0g" name="close" source="_o9Ri4EETEemMKOXnh87AKA" target="_1eqm4EETEemMKOXnh87AKA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_pwrOYEEWEemcebdzydyR0g" source="_1eqm4EETEemMKOXnh87AKA" target="_2q_QEEETEemMKOXnh87AKA"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_drYX4EETEemMKOXnh87AKA" name="Initial1"/>
+        <subvertex xmi:type="uml:State" xmi:id="_o9Ri4EETEemMKOXnh87AKA" name="created"/>
+        <subvertex xmi:type="uml:State" xmi:id="_1eqm4EETEemMKOXnh87AKA" name="closed"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_2q_QEEETEemMKOXnh87AKA" name="FinalState4"/>
+      </region>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_tzDxsEBFEemMKOXnh87AKA" name="TrainingFundingApp" visibility="protected">
       <ownedComment xmi:type="uml:Comment" xmi:id="_jGIwcEBPEemMKOXnh87AKA" annotatedElement="_KNCI4EBPEemMKOXnh87AKA">
@@ -89,6 +148,7 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_crJuYEBtEemMKOXnh87AKA" name="subject"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_cybbEEBtEemMKOXnh87AKA" name="level"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_c6ULwEBtEemMKOXnh87AKA" name="duration"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kcBAAEDYEemMKOXnh87AKA" name="status"/>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_wUJHMEBtEemMKOXnh87AKA" name="Candidate">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_0wIxYEBtEemMKOXnh87AKA" name="name"/>
@@ -99,7 +159,7 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_3f9_QkBuEemMKOXnh87AKA" name="trainingoffer" type="_TRvvAEBtEemMKOXnh87AKA" association="_3f8xIEBuEemMKOXnh87AKA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_5sW-UkBuEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_5sWXQEBuEemMKOXnh87AKA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_3f8xIEBuEemMKOXnh87AKA" memberEnd="_3f9_QkBuEemMKOXnh87AKA _3f-mUkBuEemMKOXnh87AKA">
+      <packagedElement xmi:type="uml:Association" xmi:id="_3f8xIEBuEemMKOXnh87AKA" memberEnd="_3f9_QkBuEemMKOXnh87AKA _3f-mUkBuEemMKOXnh87AKA" navigableOwnedEnd="_3f-mUkBuEemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3f9_QEBuEemMKOXnh87AKA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3f9_QUBuEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -108,7 +168,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CpTEIEBvEemMKOXnh87AKA" value="*"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_5sWXQEBuEemMKOXnh87AKA" memberEnd="_5sW-UkBuEemMKOXnh87AKA _5sXlYUBuEemMKOXnh87AKA">
+      <packagedElement xmi:type="uml:Association" xmi:id="_5sWXQEBuEemMKOXnh87AKA" memberEnd="_5sW-UkBuEemMKOXnh87AKA _5sXlYUBuEemMKOXnh87AKA" navigableOwnedEnd="_5sXlYUBuEemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5sW-UEBuEemMKOXnh87AKA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5sW-UUBuEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -121,7 +181,7 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_j3ixskBvEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_j3hjkEBvEemMKOXnh87AKA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_f5i1oEBwEemMKOXnh87AKA" name="status"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_j3hjkEBvEemMKOXnh87AKA" memberEnd="_j3ixskBvEemMKOXnh87AKA _j3jYwUBvEemMKOXnh87AKA">
+      <packagedElement xmi:type="uml:Association" xmi:id="_j3hjkEBvEemMKOXnh87AKA" memberEnd="_j3ixskBvEemMKOXnh87AKA _j3jYwUBvEemMKOXnh87AKA" navigableOwnedEnd="_j3jYwUBvEemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j3ixsEBvEemMKOXnh87AKA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j3ixsUBvEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -130,7 +190,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EwtnIEBwEemMKOXnh87AKA" value="*"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_zvYNEEBvEemMKOXnh87AKA" memberEnd="_zvY0IkBvEemMKOXnh87AKA _zvZbMkBvEemMKOXnh87AKA">
+      <packagedElement xmi:type="uml:Association" xmi:id="_zvYNEEBvEemMKOXnh87AKA" memberEnd="_zvY0IkBvEemMKOXnh87AKA _zvZbMkBvEemMKOXnh87AKA" navigableOwnedEnd="_zvY0IkBvEemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zvY0IEBvEemMKOXnh87AKA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zvY0IUBvEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -143,20 +203,25 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_zHYjgEBwEemMKOXnh87AKA" name="TraningOfferContract">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Bam8EkByEemMKOXnh87AKA" name="trainingoffer" type="_TRvvAEBtEemMKOXnh87AKA" association="_BalG4EByEemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Bap_YEByEemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BasboEByEemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BasboEByEemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_43oq4EBwEemMKOXnh87AKA" name="list"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9_kOAEBwEemMKOXnh87AKA" name="listBySubject"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Fc47MEBxEemMKOXnh87AKA" name="publish"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oIaZQEDYEemMKOXnh87AKA" name="close"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_mJjlsEBxEemMKOXnh87AKA" name="TrainingContract">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Ze-7EkByEemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_Ze-UAEByEemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ze_iIEByEemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ze_iIUByEemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ze_iIUByEemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_baDgokByEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_baC5kEByEemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_baEHsEByEemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_baEHsUByEemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_baEHsUByEemMKOXnh87AKA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1hgZ8UDbEemMKOXnh87AKA" name="trainingoffer" type="_TRvvAEBtEemMKOXnh87AKA" association="_1hfL0EDbEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1hgZ8kDbEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1hgZ80DbEemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_wR1dQEBxEemMKOXnh87AKA" name="updateStatus"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_4RliEEBxEemMKOXnh87AKA" name="certifyCandidate"/>
@@ -164,6 +229,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_eVwAQEBzEemMKOXnh87AKA" name="fundTraining"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_gqK58EBzEemMKOXnh87AKA" name="startTraining"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_NY_HsEB0EemMKOXnh87AKA" name="submitTraingApplication"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_lwqbwED5EemMKOXnh87AKA" name="failCandidate"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_BalG4EByEemMKOXnh87AKA" memberEnd="_Bam8EkByEemMKOXnh87AKA _BauQ0EByEemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Bam8EEByEemMKOXnh87AKA" source="org.eclipse.papyrus">
@@ -186,14 +252,15 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_3cT1AEBzEemMKOXnh87AKA" name="JobApplicationContract">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_T8hGIUB0EemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_T8eC0EB0EemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T8htMEB0EemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T8htMUB0EemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T8htMUB0EemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_WidNokB0EemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_WicmkEB0EemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WidNo0B0EemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WidNpEB0EemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WidNpEB0EemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9Wt98EBzEemMKOXnh87AKA" name="submitJobApplication"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_BkuPcEB0EemMKOXnh87AKA" name="listJobApplication"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_j7ub8EEQEemMKOXnh87AKA" name="close"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_T8eC0EB0EemMKOXnh87AKA" memberEnd="_T8hGIUB0EemMKOXnh87AKA _T8htMkB0EemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T8gfEEB0EemMKOXnh87AKA" source="org.eclipse.papyrus">
@@ -210,16 +277,71 @@
       <packagedElement xmi:type="uml:Class" xmi:id="_qfKMoEB0EemMKOXnh87AKA" name="HiringContract">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GKXvckB1EemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_GKV6QEB1EemMKOXnh87AKA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GKYWgEB1EemMKOXnh87AKA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GKYWgUB1EemMKOXnh87AKA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GKYWgUB1EemMKOXnh87AKA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LDiqIkD_EemMKOXnh87AKA" name="hiringrecord" type="_F2bhUEDZEemMKOXnh87AKA" association="_LDhcAED_EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDjRMED_EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDjRMUD_EemMKOXnh87AKA" value="*"/>
         </ownedAttribute>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_zqsIEEB0EemMKOXnh87AKA" name="hire"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_A69rUEB1EemMKOXnh87AKA" name="remunerate"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_zEaK8EETEemMKOXnh87AKA" name="close"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_GKV6QEB1EemMKOXnh87AKA" memberEnd="_GKXvckB1EemMKOXnh87AKA _GKYWgkB1EemMKOXnh87AKA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GKXvcEB1EemMKOXnh87AKA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GKXvcUB1EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_GKYWgkB1EemMKOXnh87AKA" name="hiringcontract" type="_qfKMoEB0EemMKOXnh87AKA" association="_GKV6QEB1EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_F2bhUEDZEemMKOXnh87AKA" name="HiringRecord">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8Ca0IEDZEemMKOXnh87AKA" name="status"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_STMuwkD_EemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_STMHsED_EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_STNV0ED_EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_STNV0UD_EemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Hv_j0kEBEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_Hv-VsEEBEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HwAK4EEBEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HwAK4UEBEemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_1hfL0EDbEemMKOXnh87AKA" memberEnd="_1hgZ8UDbEemMKOXnh87AKA _1hgZ9EDbEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1hfy4EDbEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1hgZ8EDbEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_1hgZ9EDbEemMKOXnh87AKA" name="trainingcontract" type="_mJjlsEBxEemMKOXnh87AKA" association="_1hfL0EDbEemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4cx1QED8EemMKOXnh87AKA" name="CandidateContract">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_E-VRUkD9EemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_E-S1EED9EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E-V4YED9EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E-V4YUD9EemMKOXnh87AKA" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="__-ghUED8EemMKOXnh87AKA" name="create"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_CJcH0ED9EemMKOXnh87AKA" name="list"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_fmrB4ED9EemMKOXnh87AKA" name="disable"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E-S1EED9EemMKOXnh87AKA" memberEnd="_E-VRUkD9EemMKOXnh87AKA _E-WfcED9EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E-VRUED9EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E-VRUUD9EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_E-WfcED9EemMKOXnh87AKA" name="candidatecontract" type="_4cx1QED8EemMKOXnh87AKA" association="_E-S1EED9EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_LDhcAED_EemMKOXnh87AKA" memberEnd="_LDiqIkD_EemMKOXnh87AKA _LDjRMkD_EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LDiqIED_EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LDiqIUD_EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_LDjRMkD_EemMKOXnh87AKA" name="hiringcontract" type="_qfKMoEB0EemMKOXnh87AKA" association="_LDhcAED_EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_STMHsED_EemMKOXnh87AKA" memberEnd="_STMuwkD_EemMKOXnh87AKA _STNV0kD_EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_STMuwED_EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_STMuwUD_EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_STNV0kD_EemMKOXnh87AKA" name="hiringrecord" type="_F2bhUEDZEemMKOXnh87AKA" association="_STMHsED_EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Hv-VsEEBEemMKOXnh87AKA" memberEnd="_Hv_j0kEBEemMKOXnh87AKA _HwAK4kEBEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hv_j0EEBEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Hv_j0UEBEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_HwAK4kEBEemMKOXnh87AKA" name="hiringrecord" type="_F2bhUEDZEemMKOXnh87AKA" association="_Hv-VsEEBEemMKOXnh87AKA"/>
       </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rxFvYEBEEemMKOXnh87AKA">
@@ -234,6 +356,12 @@
         <references xmi:type="ecore:EPackage" href="../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_zTAo4UBpEemMKOXnh87AKA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_bn-gIEArEem0HJ1pb6jn_Q"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E3IgIEDcEemMKOXnh87AKA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E3JHMEDcEemMKOXnh87AKA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
   </uml:Model>
   <hyperledgerfabricappprofile:hyperledgerfabricapp xmi:id="_yqqZ0EBFEemMKOXnh87AKA" base_Package="_tzDxsEBFEemMKOXnh87AKA"/>
@@ -262,4 +390,5 @@
   <hyperledgerfabricappprofile:Contract xmi:id="_424LAEByEemMKOXnh87AKA" base_Classifier="_mJjlsEBxEemMKOXnh87AKA"/>
   <hyperledgerfabricappprofile:Contract xmi:id="_ls2UMEB0EemMKOXnh87AKA" base_Classifier="_3cT1AEBzEemMKOXnh87AKA"/>
   <hyperledgerfabricappprofile:Contract xmi:id="_UiIfMEB1EemMKOXnh87AKA" base_Classifier="_qfKMoEB0EemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Contract xmi:id="_8BfSIED8EemMKOXnh87AKA" base_Classifier="_4cx1QED8EemMKOXnh87AKA"/>
 </xmi:XMI>
