@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hyperledgerfabricappprofile="http:///schemas/hyperledgerfabricappprofile/_84tNEEBDEemMKOXnh87AKA/64" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/hyperledgerfabricappprofile/_84tNEEBDEemMKOXnh87AKA/64 ../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_84tNEUBDEemMKOXnh87AKA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:hyperledgerfabricappprofile="http:///schemas/hyperledgerfabricappprofile/_zTAo4EBpEemMKOXnh87AKA/71" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/hyperledgerfabricappprofile/_zTAo4EBpEemMKOXnh87AKA/71 ../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_zTAo4UBpEemMKOXnh87AKA">
   <uml:Model xmi:id="_oB7WAEBEEemMKOXnh87AKA" name="hyperledger-training-model">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_oHcIIEBEEemMKOXnh87AKA">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -7,52 +7,231 @@
     <packagedElement xmi:type="uml:StateMachine" xmi:id="_oCJYcEBEEemMKOXnh87AKA" name="StateMachine1">
       <region xmi:type="uml:Region" xmi:id="_oCJ_gEBEEemMKOXnh87AKA" name="Region1"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_tzDxsEBFEemMKOXnh87AKA" name="TrainingFundingApp"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_gz9EsEBKEemMKOXnh87AKA" name="Publish a training"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_t8UCEEBKEemMKOXnh87AKA" name="TrainingCompany"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_u1jhwEBLEemMKOXnh87AKA" name="publishes" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_gz9EsEBKEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_7t6UQEBLEemMKOXnh87AKA" name="Consult a training"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_Fz7iAEBMEemMKOXnh87AKA" name="consults" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_PsOc0EBMEemMKOXnh87AKA" name="Fund a training"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_Smq0sEBMEemMKOXnh87AKA" name="Investor"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_X6NK4EBMEemMKOXnh87AKA" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_PsOc0EBMEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_i0OocEBMEemMKOXnh87AKA" name="consults" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_KNCI4EBPEemMKOXnh87AKA" name="CareerCounselor">
+    <packagedElement xmi:type="uml:Package" xmi:id="_tzDxsEBFEemMKOXnh87AKA" name="TrainingFundingApp" visibility="protected">
       <ownedComment xmi:type="uml:Comment" xmi:id="_jGIwcEBPEemMKOXnh87AKA" annotatedElement="_KNCI4EBPEemMKOXnh87AKA">
         <body>Par exemple Pôle Emploi</body>
       </ownedComment>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_gz9EsEBKEemMKOXnh87AKA" name="Publish a training"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_t8UCEEBKEemMKOXnh87AKA" name="TrainingCompany"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_u1jhwEBLEemMKOXnh87AKA" name="publishes" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_gz9EsEBKEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_7t6UQEBLEemMKOXnh87AKA" name="Consult a training"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Fz7iAEBMEemMKOXnh87AKA" name="consults" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_PsOc0EBMEemMKOXnh87AKA" name="Fund a training"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_Smq0sEBMEemMKOXnh87AKA" name="InvestorOrg"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_X6NK4EBMEemMKOXnh87AKA" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_PsOc0EBMEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_i0OocEBMEemMKOXnh87AKA" name="consults" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_KNCI4EBPEemMKOXnh87AKA" name="CareerCounselor"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_s3XZ8EBPEemMKOXnh87AKA" client="_oB7WAEBEEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_zz6VUEBPEemMKOXnh87AKA" name="Apply for a training"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_9aU18EBPEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_zz6VUEBPEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_IQV9QEBQEemMKOXnh87AKA" name="Accepts a Candidate for a Training"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_PSnGIEBQEemMKOXnh87AKA" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_phzW4EBQEemMKOXnh87AKA" name="EmployerOrg" visibility="protected"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_8bR-UEBQEemMKOXnh87AKA" name="Publishes job application"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_HqQ_QEBREemMKOXnh87AKA" name="Consults job application"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_L43GoEBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_HqQ_QEBREemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_Mx7coEBREemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_HqQ_QEBREemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_NcFz8EBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_oB7WAEBEEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_ho2oMEBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_i24hkEBREemMKOXnh87AKA" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_1s3wIEBREemMKOXnh87AKA" name="Certifies  the training of a Candidate"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_LuzWQEBSEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_1s3wIEBREemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_PGtGMEBSEemMKOXnh87AKA" client="_PSnGIEBQEemMKOXnh87AKA" supplier="_1s3wIEBREemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_hcDs4EBSEemMKOXnh87AKA" name="Hires a Candidate"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_kIe24EBSEemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_hcDs4EBSEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_bLGPsEBTEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_hcDs4EBSEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_n6mBIEBTEemMKOXnh87AKA" name="Remunarates(the Candidate, the CareerCounselor, the TrainingCompany and the inestor)"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_8E7zgEBTEemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_n6mBIEBTEemMKOXnh87AKA"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_qC-64EBcEemMKOXnh87AKA" name="TrainingCompany">
+        <packagedElement xmi:type="uml:Node" xmi:id="_zaxUMEBdEemMKOXnh87AKA" name="TrainingCompany.Peer">
+          <deployment xmi:type="uml:Deployment" xmi:id="_fPxWUEBkEemMKOXnh87AKA" client="_zaxUMEBdEemMKOXnh87AKA _oB7WAEBEEemMKOXnh87AKA" supplier="_2ayy0EBhEemMKOXnh87AKA" deployedArtifact="_2ayy0EBhEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_98xkQEBmEemMKOXnh87AKA" client="_zaxUMEBdEemMKOXnh87AKA" supplier="_9FZFwEBlEemMKOXnh87AKA" deployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_qPshMEBcEemMKOXnh87AKA" name="CareerCounselor">
+        <packagedElement xmi:type="uml:Node" xmi:id="_3-4YkEBdEemMKOXnh87AKA" name="CareerCounselor.Peer">
+          <deployment xmi:type="uml:Deployment" xmi:id="_hIqxoEBkEemMKOXnh87AKA" client="_3-4YkEBdEemMKOXnh87AKA" supplier="_2ayy0EBhEemMKOXnh87AKA" deployedArtifact="_2ayy0EBhEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_KN9T8EBlEemMKOXnh87AKA" client="_3-4YkEBdEemMKOXnh87AKA _oB7WAEBEEemMKOXnh87AKA" supplier="_wzKUkEBkEemMKOXnh87AKA" deployedArtifact="_wzKUkEBkEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_ZMmyoEBnEemMKOXnh87AKA" client="_3-4YkEBdEemMKOXnh87AKA" supplier="_9FZFwEBlEemMKOXnh87AKA" deployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_qaI2oEBcEemMKOXnh87AKA" name="EmployerOrg">
+        <packagedElement xmi:type="uml:Node" xmi:id="_F-_dUEBeEemMKOXnh87AKA" name="EmployerOrg.Peer">
+          <deployment xmi:type="uml:Deployment" xmi:id="_gyGrwEBkEemMKOXnh87AKA" client="_F-_dUEBeEemMKOXnh87AKA" supplier="_2ayy0EBhEemMKOXnh87AKA" deployedArtifact="_2ayy0EBhEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_ReydQEBlEemMKOXnh87AKA" client="_F-_dUEBeEemMKOXnh87AKA" supplier="_wzKUkEBkEemMKOXnh87AKA" deployedArtifact="_wzKUkEBkEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_l3lQcEBnEemMKOXnh87AKA" client="_F-_dUEBeEemMKOXnh87AKA" supplier="_9FZFwEBlEemMKOXnh87AKA" deployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_qholwEBcEemMKOXnh87AKA" name="InvestorOrg">
+        <packagedElement xmi:type="uml:Node" xmi:id="_K9U_kEBeEemMKOXnh87AKA" name="InvestorOrs.Peer">
+          <deployment xmi:type="uml:Deployment" xmi:id="_BkKMkEBlEemMKOXnh87AKA" client="_K9U_kEBeEemMKOXnh87AKA" supplier="_wzKUkEBkEemMKOXnh87AKA" deployedArtifact="_wzKUkEBkEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_eAeKQEBnEemMKOXnh87AKA" client="_K9U_kEBeEemMKOXnh87AKA" supplier="_9FZFwEBlEemMKOXnh87AKA" deployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_fMAp8EBfEemMKOXnh87AKA" name="BlockchainCoordinatorOrg">
+        <packagedElement xmi:type="uml:Node" xmi:id="_qAECYEBfEemMKOXnh87AKA" name="BlockchainCoordinatorOrg.Orderer">
+          <deployment xmi:type="uml:Deployment" xmi:id="_ed6bkEBkEemMKOXnh87AKA" client="_qAECYEBfEemMKOXnh87AKA" supplier="_2ayy0EBhEemMKOXnh87AKA _oB7WAEBEEemMKOXnh87AKA" deployedArtifact="_2ayy0EBhEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_wkSgMEBmEemMKOXnh87AKA" client="_qAECYEBfEemMKOXnh87AKA" supplier="_wzKUkEBkEemMKOXnh87AKA" deployedArtifact="_wzKUkEBkEemMKOXnh87AKA"/>
+          <deployment xmi:type="uml:Deployment" xmi:id="_7fUqYEBmEemMKOXnh87AKA" client="_qAECYEBfEemMKOXnh87AKA" supplier="_9FZFwEBlEemMKOXnh87AKA" deployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_2ayy0EBhEemMKOXnh87AKA" name="TrainingChannel" fileName=""/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_wzKUkEBkEemMKOXnh87AKA" name="JobApplicationChannel"/>
+      <packagedElement xmi:type="uml:Artifact" xmi:id="_9FZFwEBlEemMKOXnh87AKA" name="HiringChannel" fileName=""/>
+      <packagedElement xmi:type="uml:Component" xmi:id="_bGrV0EBrEemMKOXnh87AKA" name="TrainingOffer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_b3JJcEBrEemMKOXnh87AKA" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8BLLgEBsEemMKOXnh87AKA" name="Property2"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_TRvvAEBtEemMKOXnh87AKA" name="TrainingOffer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ci2G8EBtEemMKOXnh87AKA" name="title"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_crJuYEBtEemMKOXnh87AKA" name="subject"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cybbEEBtEemMKOXnh87AKA" name="level"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_c6ULwEBtEemMKOXnh87AKA" name="duration"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_wUJHMEBtEemMKOXnh87AKA" name="Candidate">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0wIxYEBtEemMKOXnh87AKA" name="name"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_07BywEBtEemMKOXnh87AKA" name="graduation"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="__F0LwEBtEemMKOXnh87AKA" name="Training">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BI8hIEBuEemMKOXnh87AKA" name="status"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3f9_QkBuEemMKOXnh87AKA" name="trainingoffer" type="_TRvvAEBtEemMKOXnh87AKA" association="_3f8xIEBuEemMKOXnh87AKA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5sW-UkBuEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_5sWXQEBuEemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_3f8xIEBuEemMKOXnh87AKA" memberEnd="_3f9_QkBuEemMKOXnh87AKA _3f-mUkBuEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3f9_QEBuEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3f9_QUBuEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3f-mUkBuEemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_3f8xIEBuEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CpOLoEBvEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CpTEIEBvEemMKOXnh87AKA" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5sWXQEBuEemMKOXnh87AKA" memberEnd="_5sW-UkBuEemMKOXnh87AKA _5sXlYUBuEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5sW-UEBuEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5sW-UUBuEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5sXlYUBuEemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_5sWXQEBuEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FO_UAEBvEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FPEzkEBvEemMKOXnh87AKA" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ZMinkEBvEemMKOXnh87AKA" name="JobApplication">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_j3ixskBvEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_j3hjkEBvEemMKOXnh87AKA"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_f5i1oEBwEemMKOXnh87AKA" name="status"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_j3hjkEBvEemMKOXnh87AKA" memberEnd="_j3ixskBvEemMKOXnh87AKA _j3jYwUBvEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_j3ixsEBvEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_j3ixsUBvEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_j3jYwUBvEemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_j3hjkEBvEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Eu9ToEBwEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EwtnIEBwEemMKOXnh87AKA" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zvYNEEBvEemMKOXnh87AKA" memberEnd="_zvY0IkBvEemMKOXnh87AKA _zvZbMkBvEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zvY0IEBvEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zvY0IUBvEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zvZbMkBvEemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_zvYNEEBvEemMKOXnh87AKA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_zvY0IkBvEemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_zvYNEEBvEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zvZbMEBvEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zvZbMUBvEemMKOXnh87AKA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zHYjgEBwEemMKOXnh87AKA" name="TraningOfferContract">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Bam8EkByEemMKOXnh87AKA" name="trainingoffer" type="_TRvvAEBtEemMKOXnh87AKA" association="_BalG4EByEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Bap_YEByEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BasboEByEemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_43oq4EBwEemMKOXnh87AKA" name="list"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9_kOAEBwEemMKOXnh87AKA" name="listBySubject"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Fc47MEBxEemMKOXnh87AKA" name="publish"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_mJjlsEBxEemMKOXnh87AKA" name="TrainingContract">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ze-7EkByEemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_Ze-UAEByEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ze_iIEByEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ze_iIUByEemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_baDgokByEemMKOXnh87AKA" name="candidate" type="_wUJHMEBtEemMKOXnh87AKA" association="_baC5kEByEemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_baEHsEByEemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_baEHsUByEemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wR1dQEBxEemMKOXnh87AKA" name="updateStatus"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_4RliEEBxEemMKOXnh87AKA" name="certifyCandidate"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_AH3FUEBzEemMKOXnh87AKA" name="acceptCandidate"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eVwAQEBzEemMKOXnh87AKA" name="fundTraining"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_gqK58EBzEemMKOXnh87AKA" name="startTraining"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NY_HsEB0EemMKOXnh87AKA" name="submitTraingApplication"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_BalG4EByEemMKOXnh87AKA" memberEnd="_Bam8EkByEemMKOXnh87AKA _BauQ0EByEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Bam8EEByEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bam8EUByEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_BauQ0EByEemMKOXnh87AKA" name="traningoffercontract" type="_zHYjgEBwEemMKOXnh87AKA" association="_BalG4EByEemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Ze-UAEByEemMKOXnh87AKA" memberEnd="_Ze-7EkByEemMKOXnh87AKA _Ze_iIkByEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ze-7EEByEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ze-7EUByEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Ze_iIkByEemMKOXnh87AKA" name="trainingcontract" type="_mJjlsEBxEemMKOXnh87AKA" association="_Ze-UAEByEemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_baC5kEByEemMKOXnh87AKA" memberEnd="_baDgokByEemMKOXnh87AKA _baEuwEByEemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_baDgoEByEemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_baDgoUByEemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_baEuwEByEemMKOXnh87AKA" name="trainingcontract" type="_mJjlsEBxEemMKOXnh87AKA" association="_baC5kEByEemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3cT1AEBzEemMKOXnh87AKA" name="JobApplicationContract">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_T8hGIUB0EemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_T8eC0EB0EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_T8htMEB0EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T8htMUB0EemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WidNokB0EemMKOXnh87AKA" name="training" type="__F0LwEBtEemMKOXnh87AKA" association="_WicmkEB0EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WidNo0B0EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WidNpEB0EemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9Wt98EBzEemMKOXnh87AKA" name="submitJobApplication"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_BkuPcEB0EemMKOXnh87AKA" name="listJobApplication"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_T8eC0EB0EemMKOXnh87AKA" memberEnd="_T8hGIUB0EemMKOXnh87AKA _T8htMkB0EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_T8gfEEB0EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_T8hGIEB0EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_T8htMkB0EemMKOXnh87AKA" name="jobapplicationcontract" type="_3cT1AEBzEemMKOXnh87AKA" association="_T8eC0EB0EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_WicmkEB0EemMKOXnh87AKA" memberEnd="_WidNokB0EemMKOXnh87AKA _WidNpUB0EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WidNoEB0EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WidNoUB0EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_WidNpUB0EemMKOXnh87AKA" name="jobapplicationcontract" type="_3cT1AEBzEemMKOXnh87AKA" association="_WicmkEB0EemMKOXnh87AKA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_qfKMoEB0EemMKOXnh87AKA" name="HiringContract">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GKXvckB1EemMKOXnh87AKA" name="jobapplication" type="_ZMinkEBvEemMKOXnh87AKA" association="_GKV6QEB1EemMKOXnh87AKA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GKYWgEB1EemMKOXnh87AKA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GKYWgUB1EemMKOXnh87AKA" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_zqsIEEB0EemMKOXnh87AKA" name="hire"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_A69rUEB1EemMKOXnh87AKA" name="remunerate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GKV6QEB1EemMKOXnh87AKA" memberEnd="_GKXvckB1EemMKOXnh87AKA _GKYWgkB1EemMKOXnh87AKA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GKXvcEB1EemMKOXnh87AKA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GKXvcUB1EemMKOXnh87AKA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_GKYWgkB1EemMKOXnh87AKA" name="hiringcontract" type="_qfKMoEB0EemMKOXnh87AKA" association="_GKV6QEB1EemMKOXnh87AKA"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_s3XZ8EBPEemMKOXnh87AKA" client="_oB7WAEBEEemMKOXnh87AKA" supplier="_7t6UQEBLEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_zz6VUEBPEemMKOXnh87AKA" name="Apply for a training"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_9aU18EBPEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_zz6VUEBPEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_IQV9QEBQEemMKOXnh87AKA" name="Accepts a Candidate for a Training"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_PSnGIEBQEemMKOXnh87AKA" client="_t8UCEEBKEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Actor" xmi:id="_phzW4EBQEemMKOXnh87AKA" name="Employer" visibility="protected"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_8bR-UEBQEemMKOXnh87AKA" name="Publishes job application"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_HqQ_QEBREemMKOXnh87AKA" name="Consults job application"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_L43GoEBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_HqQ_QEBREemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_Mx7coEBREemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_HqQ_QEBREemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_NcFz8EBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_oB7WAEBEEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_ho2oMEBREemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_i24hkEBREemMKOXnh87AKA" client="_Smq0sEBMEemMKOXnh87AKA" supplier="_IQV9QEBQEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_1s3wIEBREemMKOXnh87AKA" name="Certifies  the training of a Candidate"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_LuzWQEBSEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_1s3wIEBREemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_PGtGMEBSEemMKOXnh87AKA" client="_PSnGIEBQEemMKOXnh87AKA" supplier="_1s3wIEBREemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_hcDs4EBSEemMKOXnh87AKA" name="Hires a Candidate"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_kIe24EBSEemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_hcDs4EBSEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_bLGPsEBTEemMKOXnh87AKA" client="_KNCI4EBPEemMKOXnh87AKA" supplier="_hcDs4EBSEemMKOXnh87AKA"/>
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_n6mBIEBTEemMKOXnh87AKA" name="Remunarates(the Candidate, the CareerCounselor, the TrainingCompany and the inestor)"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_8E7zgEBTEemMKOXnh87AKA" client="_phzW4EBQEemMKOXnh87AKA" supplier="_n6mBIEBTEemMKOXnh87AKA"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rxFvYEBEEemMKOXnh87AKA">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rxG9gEBEEemMKOXnh87AKA" source="PapyrusVersion">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rxG9gUBEEemMKOXnh87AKA" key="Version" value="0.0.65"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rxG9gkBEEemMKOXnh87AKA" key="Comment" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rxG9g0BEEemMKOXnh87AKA" key="Copyright" value=""/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rxG9hEBEEemMKOXnh87AKA" key="Date" value="2019-03-06"/>
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rxG9hUBEEemMKOXnh87AKA" key="Author" value=""/>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_94JbkEBpEemMKOXnh87AKA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94JbkUBpEemMKOXnh87AKA" key="Version" value="0.0.72"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94JbkkBpEemMKOXnh87AKA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94Jbk0BpEemMKOXnh87AKA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94JblEBpEemMKOXnh87AKA" key="Date" value="2019-03-07"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94JblUBpEemMKOXnh87AKA" key="Author" value=""/>
       </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rxGWcEBEEemMKOXnh87AKA" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_84tNEUBDEemMKOXnh87AKA"/>
+        <references xmi:type="ecore:EPackage" href="../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_zTAo4UBpEemMKOXnh87AKA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../hyperledger-fabric-app-profile/hyperledger-fabric-app-profile.profile.uml#_bn-gIEArEem0HJ1pb6jn_Q"/>
     </profileApplication>
@@ -62,4 +241,25 @@
   <hyperledgerfabricappprofile:Organization xmi:id="_V_0h0EBMEemMKOXnh87AKA" base_Actor="_Smq0sEBMEemMKOXnh87AKA"/>
   <hyperledgerfabricappprofile:Organization xmi:id="_nUvM8EBREemMKOXnh87AKA" base_Actor="_phzW4EBQEemMKOXnh87AKA"/>
   <hyperledgerfabricappprofile:Organization xmi:id="_q7M9UEBREemMKOXnh87AKA" base_Actor="_KNCI4EBPEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Organization xmi:id="_FpPFMEBdEemMKOXnh87AKA" base_Package="_qC-64EBcEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Organization xmi:id="_Hvu3oEBdEemMKOXnh87AKA" base_Package="_qPshMEBcEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Organization xmi:id="_Il_KMEBdEemMKOXnh87AKA" base_Package="_qaI2oEBcEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Organization xmi:id="_JQanQEBdEemMKOXnh87AKA" base_Package="_qholwEBcEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Organization xmi:id="_ofgOkEBfEemMKOXnh87AKA" base_Package="_fMAp8EBfEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Peer xmi:id="_KcbxoEBhEemMKOXnh87AKA" base_Node="_zaxUMEBdEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Peer xmi:id="_gDxtgEBhEemMKOXnh87AKA" base_Node="_3-4YkEBdEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Peer xmi:id="_h-7yoEBhEemMKOXnh87AKA" base_Node="_F-_dUEBeEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Peer xmi:id="_m3HCgEBhEemMKOXnh87AKA" base_Node="_K9U_kEBeEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Orderer xmi:id="_o1h3AEBhEemMKOXnh87AKA" base_Node="_qAECYEBfEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Channel xmi:id="_F0aWQEBkEemMKOXnh87AKA" base_DeployedArtifact="_2ayy0EBhEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Channel xmi:id="_500JAEBpEemMKOXnh87AKA" base_DeployedArtifact="_9FZFwEBlEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Asset xmi:id="_w_BFoEBsEemMKOXnh87AKA" base_Component="_bGrV0EBrEemMKOXnh87AKA" base_Classifier="_bGrV0EBrEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Asset xmi:id="_VYNFMEBtEemMKOXnh87AKA" base_Classifier="_TRvvAEBtEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Asset xmi:id="_JLGkQEBvEemMKOXnh87AKA" base_Classifier="__F0LwEBtEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Asset xmi:id="_KOt9YEBvEemMKOXnh87AKA" base_Classifier="_wUJHMEBtEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Asset xmi:id="_3qrlAEBvEemMKOXnh87AKA" base_Classifier="_ZMinkEBvEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Contract xmi:id="_kCX2wEBxEemMKOXnh87AKA" base_Classifier="_zHYjgEBwEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Contract xmi:id="_424LAEByEemMKOXnh87AKA" base_Classifier="_mJjlsEBxEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Contract xmi:id="_ls2UMEB0EemMKOXnh87AKA" base_Classifier="_3cT1AEBzEemMKOXnh87AKA"/>
+  <hyperledgerfabricappprofile:Contract xmi:id="_UiIfMEB1EemMKOXnh87AKA" base_Classifier="_qfKMoEB0EemMKOXnh87AKA"/>
 </xmi:XMI>
