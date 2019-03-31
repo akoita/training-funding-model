@@ -1,0 +1,825 @@
+format 221
+"trainingFundingApp" // trainingFundingApp
+  revision 5
+  modified_by 9 "koita"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  stereotype "app-profile:fabricApp"
+  classview 141193 "asset-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 147721 "asset-digramm"
+      classdiagramsettings member_max_width 0 end
+      size A1
+    end
+
+    class 148617 "TrainingOffer"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 153353 // <generalisation>
+	relation 150793 ---|>
+	  a public
+	    classrelation_ref 153353 // <generalisation>
+	  b parent class_ref 149001 // AbstractTrainingAsset
+      end
+
+      attribute 129673 "title"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129801 "description"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154249 // Level (<composition>)
+	relation 151305 *---
+	  a role_name "Level" multiplicity "1" private
+	    classrelation_ref 154249 // Level (<composition>)
+	  b role_name "" private
+	    classrelation_ref 154377 // <composition>
+      end
+
+      classrelation 154505 // domain (<composition>)
+	relation 151433 *---
+	  a role_name "domain" multiplicity "1" private
+	    classrelation_ref 154505 // domain (<composition>)
+	  b role_name "" private
+	    classrelation_ref 154633 // <composition>
+      end
+
+      classrelation 155017 // <composition>
+	relation_ref 151689 // <composition>
+      end
+    end
+
+    class 148745 "TrainingOfferLevel"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128265 "Intermediate"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128393 "Advanced"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154377 // <composition>
+	relation_ref 151305 // <composition>
+      end
+    end
+
+    class 148873 "TrainingAppLifecycleStatus"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128521 "open"
+	public type class_ref 148873 // TrainingAppLifecycleStatus
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128649 "closed"
+	public type class_ref 148873 // TrainingAppLifecycleStatus
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154121 // <composition>
+	relation_ref 151177 // <composition>
+      end
+    end
+
+    class 149001 "AbstractTrainingAsset"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128777 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 153993 // status (<composition>)
+	relation 151177 *---
+	  a role_name "status" multiplicity "1" private
+	    classrelation_ref 153993 // status (<composition>)
+	  b role_name "" private
+	    classrelation_ref 154121 // <composition>
+      end
+
+      classrelation 163593 // owners (<composition>)
+	relation 159753 *---
+	  a role_name "owners" multiplicity "1..*" private
+	    classrelation_ref 163593 // owners (<composition>)
+	  b role_name "" private
+	    classrelation_ref 163721 // <composition>
+      end
+    end
+
+    class 149129 "Domain"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129289 "SoftwareDeveloper"
+	public type class_ref 149129 // Domain
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129417 "ProjectManager"
+	public type class_ref 149129 // Domain
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129545 "Language"
+	public type class_ref 149129 // Domain
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154633 // <composition>
+	relation_ref 151433 // <composition>
+      end
+    end
+
+    class 149257 "Training"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 154889 // trainingOffer (<composition>)
+	relation 151689 *---
+	  a role_name "trainingOffer" multiplicity "1" private
+	    classrelation_ref 154889 // trainingOffer (<composition>)
+	  b role_name "" private
+	    classrelation_ref 155017 // <composition>
+      end
+
+      classrelation 155401 // graduationStatus (<composition>)
+	relation 151945 *---
+	  a role_name "graduationStatus" multiplicity "1" private
+	    classrelation_ref 155401 // graduationStatus (<composition>)
+	  b role_name "" private
+	    classrelation_ref 155529 // <composition>
+      end
+
+      classrelation 155657 // candidate (<composition>)
+	relation 152073 *---
+	  a role_name "candidate" multiplicity "1" private
+	    classrelation_ref 155657 // candidate (<composition>)
+	  b role_name "" private
+	    classrelation_ref 155785 // <composition>
+      end
+
+      classrelation 163209 // <generalisation>
+	relation 159497 ---|>
+	  a public
+	    classrelation_ref 163209 // <generalisation>
+	  b parent class_ref 149001 // AbstractTrainingAsset
+      end
+    end
+
+    class 149385 "Candidate"
+      visibility package stereotype "app-profile:Participant"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 155785 // <composition>
+	relation_ref 152073 // <composition>
+      end
+
+      classrelation 163081 // <generalisation>
+	relation 159369 ---|>
+	  a public
+	    classrelation_ref 163081 // <generalisation>
+	  b parent class_ref 156425 // AbstractTrainingParticipant
+      end
+    end
+
+    class 149513 "TrainingAppGraduationStatus"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130313 "InProgress"
+	public type class_ref 149513 // TrainingAppGraduationStatus
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129929 "succeeded"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130057 "failed"
+	public type class_ref 149513 // TrainingAppGraduationStatus
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 155529 // <composition>
+	relation_ref 151945 // <composition>
+      end
+    end
+
+    class 156425 "AbstractTrainingParticipant"
+      visibility package stereotype "app-profile:Participant"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130569 "lastName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130441 "firstName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 137097 "id"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 163721 // <composition>
+	relation_ref 159753 // <composition>
+      end
+    end
+  end
+
+  package_ref 141449 // trainingCompnay
+
+  package_ref 141577 // CareerCounselor
+
+  package_ref 141705 // Investor
+
+  package_ref 141833 // Employer
+
+  package_ref 141961 // BlockchainCoordinator
+
+  classview 147721 "contract-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 149641 "TrainingOfferContract"
+      visibility package stereotype "app-profile:Contract"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 134537 "createTrainingOffer"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 134665 "listTrainingOffers"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 134793 "listTrainingOffersContainingKeyword"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 134921 "listTrainingOffersForDomain"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135049 "listTrainingOffersForDomainAndLevel"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135177 "closeTrainingOffer"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 162313 // <dependency>
+	relation 158601 -_->
+	  a public
+	    classrelation_ref 162313 // <dependency>
+	  b parent class_ref 148617 // TrainingOffer
+      end
+
+    end
+
+    classdiagram 154249 "contract-diagramm"
+      classdiagramsettings member_max_width 0 end
+      size A1
+    end
+
+    class 156169 "TrainingContract"
+      visibility package stereotype "app-profile:Contract"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135305 "createTraining"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135433 "submitTrainingApplication"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135561 "fundTraining"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135689 "startTraining"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135817 "certifyCandidate"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 135945 "failCandidate"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 162569 // <dependency>
+	relation 158857 -_->
+	  a public
+	    classrelation_ref 162569 // <dependency>
+	  b parent class_ref 149257 // Training
+      end
+
+      classrelation 162697 // <dependency>
+	relation 158985 -_->
+	  a public
+	    classrelation_ref 162697 // <dependency>
+	  b parent class_ref 149385 // Candidate
+      end
+    end
+
+    class 156297 "CondidateContract"
+      visibility package stereotype "app-profile:Contract"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136073 "createCandidate"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 136201 "listCandidates"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 136329 "disableCandidate"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 136457 "getCandidateTrainings"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 162825 // <dependency>
+	relation 159113 -_->
+	  a public
+	    classrelation_ref 162825 // <dependency>
+	  b parent class_ref 149257 // Training
+      end
+
+      classrelation 162953 // <dependency>
+	relation 159241 -_->
+	  a public
+	    classrelation_ref 162953 // <dependency>
+	  b parent class_ref 149385 // Candidate
+      end
+    end
+  end
+end

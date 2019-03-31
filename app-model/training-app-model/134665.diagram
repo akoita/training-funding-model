@@ -1,0 +1,59 @@
+format 221
+
+classcanvas 128137 class_ref 134665 // Participant
+  classdiagramsettings member_max_width 0 end
+  xyzwh 178.701 465.287 2000 165 85
+end
+classcanvas 128265 class_ref 134537 // fabricApp
+  classdiagramsettings member_max_width 0 end
+  xyzwh 565.565 184.596 2000 403 98
+end
+classcanvas 128521 class_ref 134793 // Asset
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1289.99 455.302 2000 161 89
+end
+classcanvas 128777 class_ref 134921 // Contract
+  classdiagramsettings member_max_width 0 end
+  xyzwh 694.908 775.397 2000 163 87
+end
+classcanvas 128905 class_ref 135049 // Organization
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1286 183.199 2000 142 71
+end
+relationcanvas 128393 relation_ref 134537 // <composition>
+  from ref 128265 z 2001 to ref 128137
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128649 relation_ref 134665 // <composition>
+  from ref 128265 z 2001 to ref 128521
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129033 relation_ref 134793 // <composition>
+  from ref 128265 z 2001 to ref 128777
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129417 relation_ref 141577 // <directional aggregation>
+  from ref 128137 z 2001 to ref 128521
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129545 relation_ref 141705 // <dependency>
+  from ref 128777 z 2001 to ref 128137
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129673 relation_ref 141833 // <dependency>
+  from ref 128777 z 2001 to ref 128521
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130569 relation_ref 142089 // <composition>
+  from ref 128265 z 2001 to ref 128905
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+preferred_whz 0 0 0.98
+end

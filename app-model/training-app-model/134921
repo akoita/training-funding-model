@@ -1,0 +1,210 @@
+format 221
+"deployment-profile" // hlf-app-profile::deployment-profile
+  revision 4
+  modified_by 9 "koita"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  stereotype "profile"
+  oid 128265
+  classview 134665 "deployment-profile-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    oid 134665
+    classdiagram 141193 "deployment-profile-diagramm"
+      classdiagramsettings member_max_width 0 end
+      oid 141193
+      size A1
+    end
+
+    class 141705 "Channel"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      oid 141705
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "Artifact"
+      key "stereotypeIconPath" value ""
+      classrelation 145289 // organization (<unidirectional association>)
+	relation 143241 --->
+	  oid 143241
+	  a role_name "organization" multiplicity "1..*" private
+	    classrelation_ref 145289 // organization (<unidirectional association>)
+	  b parent class_ref 135049 // Organization
+	oid 145289
+      end
+    end
+
+    class 141833 "Peer"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      oid 141833
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "DeploymentNode"
+      key "stereotypeIconPath" value ""
+      classrelation 143369 // channel (<unidirectional association>)
+	relation 142345 --->
+	  oid 142345
+	  a role_name "channel" multiplicity "*" private
+	    classrelation_ref 143369 // channel (<unidirectional association>)
+	  b parent class_ref 141705 // Channel
+	oid 143369
+      end
+
+      classrelation 143753 // <association>
+	relation_ref 142473 // <association>
+	oid 143753
+      end
+
+      classrelation 145033 // organization (<composition>)
+	relation_ref 143113 // <composition>
+	oid 145033
+      end
+
+      classrelation 145417 // orderer (<association>)
+	relation 143369 ----
+	  oid 143369
+	  a role_name "orderer" multiplicity "1..*" private
+	    classrelation_ref 145417 // orderer (<association>)
+	  b role_name "peer" multiplicity "*" private
+	    classrelation_ref 145545 // peer (<association>)
+	oid 145417
+      end
+    end
+
+    class 141961 "ClientApp"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      oid 141961
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "DeploymentNode"
+      key "stereotypeIconPath" value ""
+      classrelation 143625 // peer (<association>)
+	relation 142473 ----
+	  oid 142473
+	  a role_name "peer" multiplicity "*" private
+	    classrelation_ref 143625 // peer (<association>)
+	  b role_name "clientApp" multiplicity "*" private
+	    classrelation_ref 143753 // <association>
+	oid 143625
+      end
+
+      classrelation 144777 // organization (<composition>)
+	relation_ref 142985 // <composition>
+	oid 144777
+      end
+
+      classrelation 145929 // orderer (<unidirectional association>)
+	relation 143753 --->
+	  oid 143753
+	  a role_name "orderer" multiplicity "1..*" private
+	    classrelation_ref 145929 // orderer (<unidirectional association>)
+	  b parent class_ref 142089 // Orderer
+	oid 145929
+      end
+    end
+
+    class 142089 "Orderer"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      oid 142089
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "DeploymentNode"
+      key "stereotypeIconPath" value ""
+      classrelation 145545 // peer (<association>)
+	relation_ref 143369 // <association>
+	oid 145545
+      end
+
+      classrelation 146825 // <composition>
+	relation_ref 144265 // <composition>
+	oid 146825
+      end
+    end
+  end
+end

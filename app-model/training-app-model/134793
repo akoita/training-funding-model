@@ -1,0 +1,40 @@
+format 221
+"hlf-app-profile" // hlf-app-profile
+  revision 1
+  modified_by 9 "koita"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  oid -1
+  ncouples 1
+  key "html dir" value "C:\\dev\\hyperledger\\training-app-uml-models\\diagram-images\\bouml\\profile/"
+  imported_project_dir "C:/dev/hyperledger/training-app-uml-models/hlf-app-profile/hlf-app-profile"
+  package_ref 128137 // app-profile
+
+  package_ref 134921 // deployment-profile
+end

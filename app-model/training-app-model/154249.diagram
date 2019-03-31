@@ -1,0 +1,64 @@
+format 221
+
+classcanvas 128009 class_ref 149641 // TrainingOfferContract
+  classdiagramsettings member_max_width 0 end
+  xyz 521 199 2000
+end
+classcanvas 128265 class_ref 148617 // TrainingOffer
+  classdiagramsettings member_max_width 0 end
+  xyzwh 557 684 2000 217 125
+end
+classcanvas 128649 class_ref 149257 // Training
+  classdiagramsettings member_max_width 0 end
+  xyzwh 985 696 2006 169 103
+end
+classcanvas 128905 class_ref 156169 // TrainingContract
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1565 184 2000 281 187
+end
+classcanvas 129033 class_ref 149385 // Candidate
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1684 704 2012 169 95
+end
+classcanvas 129673 class_ref 156297 // CondidateContract
+  classdiagramsettings member_max_width 0 end
+  xyzwh 908 197 2000 307 183
+end
+relationcanvas 128393 relation_ref 158601 // <dependency>
+  from ref 128009 z 2001 to ref 128265
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128777 relation_ref 151689 // <composition>
+  from ref 128649 z 2007 to ref 128265
+  role_a_pos 783 722 3000 no_role_b
+  multiplicity_a_pos 783 755 3000 no_multiplicity_b
+end
+relationcanvas 129289 relation_ref 152073 // <composition>
+  from ref 128649 z 2013 to ref 129033
+  role_a_pos 1604 726 3000 no_role_b
+  multiplicity_a_pos 1664 759 3000 no_multiplicity_b
+end
+relationcanvas 129417 relation_ref 158857 // <dependency>
+  from ref 128905 z 2007 to ref 128649
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129545 relation_ref 158985 // <dependency>
+  decenter_begin 689
+  from ref 128905 z 2013 to ref 129033
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129801 relation_ref 159113 // <dependency>
+  from ref 129673 z 2007 to ref 128649
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129929 relation_ref 159241 // <dependency>
+  decenter_begin 947
+  from ref 129673 z 2013 to ref 129033
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end
