@@ -2,23 +2,23 @@ format 221
 
 classcanvas 128137 class_ref 134665 // Participant
   classdiagramsettings member_max_width 0 end
-  xyzwh 178.501 465.547 2000 165 85
+  xyzwh 178.501 465.497 2000 165 85
 end
 classcanvas 128265 class_ref 134537 // fabricApp
   classdiagramsettings member_max_width 0 end
-  xyzwh 565.445 184.536 2000 403 98
+  xyzwh 565.545 184.586 2000 403 98
 end
 classcanvas 128521 class_ref 134793 // Asset
   classdiagramsettings member_max_width 0 end
-  xyzwh 1289.48 455.092 2000 161 89
+  xyzwh 1289.06 455.272 2000 161 89
 end
 classcanvas 128777 class_ref 134921 // Contract
   classdiagramsettings member_max_width 0 end
-  xyzwh 694.908 775.717 2000 163 87
+  xyzwh 694.908 776.367 2000 163 87
 end
 classcanvas 128905 class_ref 135049 // Organization
   classdiagramsettings member_max_width 0 end
-  xyzwh 1286.08 183.439 2000 142 71
+  xyzwh 1285.68 183.739 2000 142 71
 end
 relationcanvas 128393 relation_ref 134537 // <composition>
   from ref 128265 z 2001 to ref 128137

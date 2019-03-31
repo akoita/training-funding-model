@@ -1,6 +1,6 @@
 format 221
 "app-profile" // app-profile
-  revision 3
+  revision 4
   modified_by 9 "koita"
   // class settings
   
@@ -155,7 +155,6 @@ format 221
       classrelation 134921 // <composition>
 	relation_ref 134665 // <composition>
       end
-
     end
 
     class 134921 "Contract"
@@ -168,6 +167,13 @@ format 221
       explicit_switch_type ""
       mysql_decl ""
       
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "Class Component"
+      key "stereotypeIconPath" value ""
       classrelation 135177 // <composition>
 	relation_ref 134793 // <composition>
       end
@@ -231,7 +237,6 @@ format 221
 	  b role_name "" private
 	    classrelation_ref 146825 // <composition>
       end
-
     end
   end
 end
