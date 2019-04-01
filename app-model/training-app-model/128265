@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 5
+  revision 7
   modified_by 9 "koita"
   // class settings
   
@@ -31,6 +31,7 @@ format 221
    end
   
   stereotype "app-profile:fabricApp"
+  java_dir "C:\\dev\\hyperledger\\training-app-uml-models\\generated"
   classview 141193 "asset-view"
     
     classdiagramsettings member_max_width 0 end
@@ -59,7 +60,9 @@ format 221
     class 148617 "TrainingOffer"
       visibility package stereotype "app-profile:Asset"
       cpp_decl ""
-      java_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
       php_decl ""
       python_2_2 python_decl ""
       idl_decl ""
@@ -69,6 +72,7 @@ format 221
       classrelation 153353 // <generalisation>
 	relation 150793 ---|>
 	  a public
+	    java "${type}"
 	    classrelation_ref 153353 // <generalisation>
 	  b parent class_ref 149001 // AbstractTrainingAsset
       end
@@ -76,7 +80,8 @@ format 221
       attribute 129673 "title"
 	private explicit_type "string"
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -87,7 +92,8 @@ format 221
       attribute 129801 "description"
 	private explicit_type "string"
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -98,6 +104,8 @@ format 221
       classrelation 154249 // Level (<composition>)
 	relation 151305 *---
 	  a role_name "Level" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 154249 // Level (<composition>)
 	  b role_name "" private
 	    classrelation_ref 154377 // <composition>
@@ -106,6 +114,8 @@ format 221
       classrelation 154505 // domain (<composition>)
 	relation 151433 *---
 	  a role_name "domain" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 154505 // domain (<composition>)
 	  b role_name "" private
 	    classrelation_ref 154633 // <composition>
@@ -140,7 +150,7 @@ ${items}};
       attribute 128265 "Intermediate"
 	public type class_ref 148745 // TrainingOfferLevel
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -151,7 +161,7 @@ ${items}};
       attribute 128393 "Advanced"
 	public type class_ref 148745 // TrainingOfferLevel
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -188,7 +198,7 @@ ${items}};
       attribute 128521 "open"
 	public type class_ref 148873 // TrainingAppLifecycleStatus
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -199,7 +209,7 @@ ${items}};
       attribute 128649 "closed"
 	public type class_ref 148873 // TrainingAppLifecycleStatus
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -236,7 +246,8 @@ ${members}};
       attribute 128777 "id"
 	private explicit_type ""
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -247,6 +258,8 @@ ${members}};
       classrelation 153993 // status (<composition>)
 	relation 151177 *---
 	  a role_name "status" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 153993 // status (<composition>)
 	  b role_name "" private
 	    classrelation_ref 154121 // <composition>
@@ -255,8 +268,12 @@ ${members}};
       classrelation 163593 // owners (<composition>)
 	relation 159753 *---
 	  a role_name "owners" multiplicity "1..*" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
 	    classrelation_ref 163593 // owners (<composition>)
 	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 163721 // <composition>
       end
     end
@@ -285,7 +302,7 @@ ${items}};
       attribute 129289 "SoftwareDeveloper"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -296,7 +313,7 @@ ${items}};
       attribute 129417 "ProjectManager"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -307,7 +324,7 @@ ${items}};
       attribute 129545 "Language"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -344,14 +361,20 @@ ${members}};
       classrelation 154889 // trainingOffer (<composition>)
 	relation 151689 *---
 	  a role_name "trainingOffer" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 154889 // trainingOffer (<composition>)
 	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 155017 // <composition>
       end
 
       classrelation 155401 // graduationStatus (<composition>)
 	relation 151945 *---
 	  a role_name "graduationStatus" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 155401 // graduationStatus (<composition>)
 	  b role_name "" private
 	    classrelation_ref 155529 // <composition>
@@ -360,21 +383,26 @@ ${members}};
       classrelation 155657 // candidate (<composition>)
 	relation 152073 *---
 	  a role_name "candidate" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 155657 // candidate (<composition>)
 	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	    classrelation_ref 155785 // <composition>
       end
 
       classrelation 163209 // <generalisation>
 	relation 159497 ---|>
 	  a public
+	    java "${type}"
 	    classrelation_ref 163209 // <generalisation>
 	  b parent class_ref 149001 // AbstractTrainingAsset
       end
     end
 
     class 149385 "Candidate"
-      visibility package stereotype "app-profile:Participant"
+      visibility package stereotype "app-profile:Asset"
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
 ${inlines}
@@ -394,15 +422,40 @@ ${members}};
       explicit_switch_type ""
       mysql_decl ""
       
+      attribute 130441 "firstName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130569 "lastName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
       classrelation 155785 // <composition>
 	relation_ref 152073 // <composition>
       end
 
-      classrelation 163081 // <generalisation>
-	relation 159369 ---|>
+      classrelation 170249 // <generalisation>
+	relation 166281 ---|>
 	  a public
-	    classrelation_ref 163081 // <generalisation>
-	  b parent class_ref 156425 // AbstractTrainingParticipant
+	    java "${type}"
+	    classrelation_ref 170249 // <generalisation>
+	  b parent class_ref 149001 // AbstractTrainingAsset
       end
     end
 
@@ -430,7 +483,7 @@ ${items}};
       attribute 130313 "InProgress"
 	public type class_ref 149513 // TrainingAppGraduationStatus
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -441,7 +494,7 @@ ${items}};
       attribute 129929 "succeeded"
 	private explicit_type ""
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -452,7 +505,7 @@ ${items}};
       attribute 130057 "failed"
 	public type class_ref 149513 // TrainingAppGraduationStatus
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -486,32 +539,11 @@ ${members}};
       explicit_switch_type ""
       mysql_decl ""
       
-      attribute 130569 "lastName"
-	private explicit_type ""
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      attribute 130441 "firstName"
-	private explicit_type ""
-	cpp_decl ""
-	java_decl ""
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
       attribute 137097 "id"
 	private explicit_type ""
 	cpp_decl ""
-	java_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
@@ -577,60 +609,72 @@ ${members}};
       mysql_decl ""
       
       operation 134537 "createTrainingOffer"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 134665 "listTrainingOffers"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 134793 "listTrainingOffersContainingKeyword"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 134921 "listTrainingOffersForDomain"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135049 "listTrainingOffersForDomainAndLevel"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135177 "closeTrainingOffer"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
@@ -642,7 +686,6 @@ ${members}};
 	    classrelation_ref 162313 // <dependency>
 	  b parent class_ref 148617 // TrainingOffer
       end
-
     end
 
     classdiagram 154249 "contract-diagramm"
@@ -672,60 +715,84 @@ ${members}};
       mysql_decl ""
       
       operation 135305 "createTraining"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135433 "submitTrainingApplication"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135561 "fundTraining"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135689 "startTraining"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135817 "certifyCandidate"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 135945 "failCandidate"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
+	
+	
+      end
+
+      operation 136457 "getCandidateTrainings"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
@@ -768,50 +835,39 @@ ${members}};
       mysql_decl ""
       
       operation 136073 "createCandidate"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 136201 "listCandidates"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
-	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
       end
 
       operation 136329 "disableCandidate"
-	public explicit_return_type ""
+	public explicit_return_type "void"
 	nparams 0
 	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
 	
 	
 	
-	
-      end
-
-      operation 136457 "getCandidateTrainings"
-	public explicit_return_type ""
-	nparams 0
-	
-	
-	
-	
-	
-      end
-
-      classrelation 162825 // <dependency>
-	relation 159113 -_->
-	  a public
-	    classrelation_ref 162825 // <dependency>
-	  b parent class_ref 149257 // Training
       end
 
       classrelation 162953 // <dependency>

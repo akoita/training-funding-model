@@ -1,6 +1,6 @@
 format 221
 "training-app-model"
-  revision 6
+  revision 7
   modified_by 9 "koita"
 
 
@@ -44,6 +44,8 @@ format 221
 
   mark_for_import
   
+  java_dir "C:\\dev\\hyperledger\\training-app-uml-models\\generated"
+  java_package "app"
   classview 128265 "package-view"
     
     classdiagramsettings member_max_width 0 end
@@ -73,4 +75,6 @@ format 221
   package_ref 128265 // trainingFundingApp
 
   package_ref 134793 // hlf-app-profile
+add_operation_profile
+
 end

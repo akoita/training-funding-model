@@ -34,7 +34,7 @@ classcanvas 131465 class_ref 149513 // TrainingAppGraduationStatus
 end
 classcanvas 132233 class_ref 156425 // AbstractTrainingParticipant
   classdiagramsettings member_max_width 0 end
-  xyzwh 1369 382 2000 251 171
+  xyzwh 1366 382 2000 251 171
 end
 relationcanvas 128521 relation_ref 150793 // <generalisation>
   geometry VHV
@@ -75,12 +75,6 @@ relationcanvas 131977 relation_ref 152073 // <composition>
   role_a_pos 1286 844 3000 no_role_b
   multiplicity_a_pos 1346 877 3000 no_multiplicity_b
 end
-relationcanvas 132361 relation_ref 159369 // <generalisation>
-  decenter_begin 442
-  from ref 131337 z 2001 to ref 132233
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
 relationcanvas 133513 relation_ref 159497 // <generalisation>
   geometry VHV unfixed
   from ref 130185 z 2001 to point 1061 683
@@ -91,7 +85,15 @@ relationcanvas 133513 relation_ref 159497 // <generalisation>
 end
 relationcanvas 134537 relation_ref 159753 // <composition>
   from ref 128393 z 2001 to ref 132233
-  role_a_pos 1308 442 3000 no_role_b
-  multiplicity_a_pos 1335 475 3000 no_multiplicity_b
+  role_a_pos 1305 442 3000 no_role_b
+  multiplicity_a_pos 1332 475 3000 no_multiplicity_b
+end
+relationcanvas 134665 relation_ref 166281 // <generalisation>
+  geometry VHV unfixed
+  from ref 131337 z 2007 to point 1514 683
+  line 134921 z 2007 to point 735 683
+  line 135049 z 2007 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
 end
 end
