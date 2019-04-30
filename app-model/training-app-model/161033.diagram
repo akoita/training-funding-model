@@ -1,42 +1,56 @@
 format 221
 
 subject 128009 "Training Process"
-  xyzwh 861 111 2000 488 717
+  xyzwh 1099 182 2000 488 717
 classcanvas 128137 class_ref 162953 // TrainingCompany
   simpleclassdiagramsettings end
-  xyz 525 585 2000
+  xyz 798 564 2000
 end
 classcanvas 128265 class_ref 163081 // CareerAdvisor
   simpleclassdiagramsettings end
-  xyz 539 184 2000
+  xyz 784 248 2000
 end
 classcanvas 128393 class_ref 163209 // Investor
   simpleclassdiagramsettings end
-  xyz 539 400 2000
+  xyz 829 393 2000
 end
 usecasecanvas 128521 usecase_ref 128009 // Create Candidate Profile
-  xyzwh 1143 142 3005 64 32 label_xy 1088 175
+  xyzwh 1381 205 3005 64 32 label_xy 1326 238
 end
 usecasecanvas 128777 usecase_ref 128137 // Create Training Offer
-  xyzwh 1143 432 3005 64 32 label_xy 1107 465
+  xyzwh 1381 495 3005 64 32 label_xy 1345 528
 end
 usecasecanvas 128905 usecase_ref 128265 // Submit An Application for a Training
-  xyzwh 1143 243 3005 64 32 label_xy 1053 275
+  xyzwh 1381 306 3005 64 32 label_xy 1291 338
 end
 usecasecanvas 129033 usecase_ref 128393 // Fund a Training
-  xyzwh 1141 326 3005 64 32 label_xy 1129 368
+  xyzwh 1379 389 3005 64 32 label_xy 1367 431
 end
 usecasecanvas 129673 usecase_ref 128521 // Accept An Application for a Training
-  xyzwh 1143 521 3005 64 32 label_xy 1050 553
+  xyzwh 1381 584 3005 64 32 label_xy 1288 616
 end
 usecasecanvas 129801 usecase_ref 128649 // Start a Training
-  xyzwh 1143 599 3005 64 32 label_xy 1122 631
+  xyzwh 1381 662 3005 64 32 label_xy 1360 694
 end
 usecasecanvas 129929 usecase_ref 128777 // Validate a Training
-  xyzwh 1143 704 3005 64 32 label_xy 1089 737
+  xyzwh 1381 767 3005 64 32 label_xy 1327 800
 end
 fragment 131593 "Training Use Case Diagram"
-  xyzwh 377 65 2000 994 787
+  xyzwh 20 44 2000 1598 875
+end
+subject 131849 "Training Process"
+  xyzwh 36 182 2005 629 555
+usecasecanvas 131977 usecase_ref 135433 // Consult Candidate
+  xyzwh 306 595 3005 91 33 label_xy 307 647
+end
+usecasecanvas 132105 usecase_ref 135561 // Consult Training Offer
+  xyzwh 84 594 3005 91 33 label_xy 66 626
+end
+usecasecanvas 132233 usecase_ref 135689 // Consult Training
+  xyzwh 475 595 3005 91 33 label_xy 477 627
+end
+usecasecanvas 134793 usecase_ref 142217 // Consult
+  xyzwh 287 327 3005 91 33 label_xy 318 359
 end
 line 128649 --->
   from ref 128265 z 3006 to ref 128521
@@ -52,4 +66,19 @@ line 131337 --->
   from ref 128137 z 3006 to ref 129801
 line 131465 --->
   from ref 128137 z 3011 to ref 129929
+simplerelationcanvas 134921 simplerelation_ref 128009
+  from ref 134793 z 3006 stereotype "<<include>>" xyz 187 475.5 3000 to ref 132105
+end
+simplerelationcanvas 135305 simplerelation_ref 128393
+  from ref 134793 z 3006 stereotype "<<include>>" xyz 382.5 476.5 3000 to ref 132233
+end
+simplerelationcanvas 135561 simplerelation_ref 128521
+  from ref 134793 z 3006 stereotype "<<include>>" xyz 298.5 476.5 3000 to ref 131977
+end
+line 135945 --->
+  from ref 128137 z 3006 to ref 134793
+line 136073 --->
+  from ref 128393 z 3006 to ref 134793
+line 136201 --->
+  from ref 128265 z 3006 to ref 134793
 end

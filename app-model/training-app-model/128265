@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 13
+  revision 15
   modified_by 9 "koita"
   // class settings
   
@@ -183,7 +183,6 @@ ${items}};
       classrelation 154377 // <composition>
 	relation_ref 151305 // <composition>
       end
-
     end
 
     class 148873 "TrainingAppLifecycleStatus"
@@ -1250,7 +1249,6 @@ ${members}};
 	flow 128777 "<flow>"
 	  on activityaction_ref 128137 // activity action submitApplication
 	end
-
       end
 
       activityaction 128137 "submitApplication"
@@ -1300,7 +1298,6 @@ ${members}};
       activityaction 135433 "CloseTraining"
 	opaque_action
       end
-
     end
   end
 
@@ -1327,7 +1324,7 @@ ${members}};
      end
     usecasediagram 161033 "use-case-diagramm"
       usecasediagramsettings end
-      size A2
+      size A1
     end
 
     class 162953 "TrainingCompany"
@@ -1531,6 +1528,120 @@ ${members}}
       
       activitydiagramsettings
        end
+    end
+
+    usecase 135433 "Consult Candidate"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 135561 "Consult Training Offer"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 135689 "Consult Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 142217 "Consult"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 128009
+	-_->
+	  stereotype "include"
+	  on usecase_ref 135561 // Consult Training Offer
+      end
+
+      simplerelation 128137
+	-_->
+	  on usecase_ref 135433 // Consult Candidate
+      end
+
+      simplerelation 128393
+	-_->
+	  stereotype "include"
+	  on usecase_ref 135689 // Consult Training
+      end
+
+      simplerelation 128521
+	-_->
+	  stereotype "include"
+	  on usecase_ref 135433 // Consult Candidate
+      end
     end
   end
 end
