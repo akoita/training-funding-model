@@ -28,11 +28,11 @@ classcanvas 131337 class_ref 149385 // Candidate
   classdiagramsettings member_max_width 0 end
   xyzwh 1366 809 2000 303 119
 end
-classcanvas 131465 class_ref 149513 // TrainingAppGraduationStatus
+classcanvas 131465 class_ref 149513 // TrainingProcessStatus
   classdiagramsettings member_max_width 0 end
-  xyzwh 934 1096 2000 271 139
+  xyzwh 931 1092 2000 271 207
 end
-classcanvas 132233 class_ref 156425 // AbstractTrainingParticipant
+classcanvas 132233 class_ref 156425 // Participant
   classdiagramsettings member_max_width 0 end
   xyzwh 1366 382 2000 251 171
 end
@@ -67,8 +67,8 @@ relationcanvas 131209 relation_ref 151689 // <composition>
 end
 relationcanvas 131721 relation_ref 151945 // <composition>
   from ref 130185 z 2001 to ref 131465
-  role_a_pos 1076 1071 3000 no_role_b
-  multiplicity_a_pos 1047 1071 3000 no_multiplicity_b
+  role_a_pos 1075 1067 3000 no_role_b
+  multiplicity_a_pos 1046 1067 3000 no_multiplicity_b
 end
 relationcanvas 131977 relation_ref 152073 // <composition>
   from ref 130185 z 2001 to ref 131337

@@ -1,0 +1,100 @@
+format 221
+
+activitypartitioncanvas 128393 activitypartition_ref 128009 // Career Advisor
+  xyzwh 94 64 2005 935 325
+end
+activitypartitioncanvas 128521 activitypartition_ref 128137 // Training Company
+  xyzwh 521 400 2005 508 509
+end
+activitypartitioncanvas 128649 activitypartition_ref 128265 // Investor
+  xyzwh 94 400 2000 418 507
+end
+activitynodecanvas 128777 activitynode_ref 128009 // initial_node
+  xyz 151 221 2010
+end
+activityactioncanvas 128905 activityaction_ref 128009 // activity action createTraining
+  
+  show_opaque_action_definition default
+  xyzwh 244 201 2010 131 59
+end
+activityactioncanvas 129545 activityaction_ref 128137 // activity action submitApplication
+  
+  show_opaque_action_definition default
+  xyzwh 377 290 2010 183 51
+end
+activityactioncanvas 130953 activityaction_ref 128265 // activity action AcceptApplication
+  
+  show_opaque_action_definition default
+  xyzwh 696 517 2010 185 55
+end
+activityactioncanvas 131721 activityaction_ref 128393 // activity action FundTraining
+  
+  show_opaque_action_definition default
+  xyzwh 173 534 2010 179 53
+end
+activityactioncanvas 132617 activityaction_ref 134921 // activity action StartTraining
+  
+  show_opaque_action_definition default
+  xyzwh 697 598 2010 168 52
+end
+activityactioncanvas 132873 activityaction_ref 135049 // activity action Pass
+  
+  show_opaque_action_definition default
+  xyzwh 579 735 2010 183 65
+end
+activityactioncanvas 133001 activityaction_ref 135177 // activity action Fail
+  
+  show_opaque_action_definition default
+  xyzwh 809 734 2010 163 63
+end
+activityactioncanvas 133769 activityaction_ref 135433 // activity action CloseTraining
+  
+  show_opaque_action_definition default
+  xyzwh 609 287 2010 143 53
+end
+fragment 134665 "Training Activity Diagram"
+  xyzwh 37 21 2010 1033 911
+end
+flowcanvas 129033 flow_ref 128009 // <flow>
+  
+  from ref 128777 z 2011 to ref 128905
+   write_horizontally default
+end
+flowcanvas 131849 flow_ref 128777 // <flow>
+  geometry VH
+  
+  from ref 128905 z 2011 to point 307 310
+  line 132233 z 2011 to ref 129545
+   write_horizontally default
+end
+flowcanvas 132361 flow_ref 135305 // <flow>
+  
+  from ref 129545 z 2011 to ref 130953
+   write_horizontally default
+end
+flowcanvas 132489 flow_ref 135433 // <flow>
+  
+  from ref 130953 z 2011 to ref 131721
+   write_horizontally default
+end
+flowcanvas 132745 flow_ref 135561 // <flow>
+  
+  from ref 131721 z 2011 to ref 132617
+   write_horizontally default
+end
+flowcanvas 134025 flow_ref 135945 // <flow>
+  
+  from ref 129545 z 2011 to ref 133769
+   write_horizontally default
+end
+flowcanvas 134409 flow_ref 136201 // <flow>
+  
+  from ref 132617 z 2011 to ref 132873
+   write_horizontally default
+end
+flowcanvas 134537 flow_ref 136329 // <flow>
+  
+  from ref 132617 z 2011 to ref 133001
+   write_horizontally default
+end
+end

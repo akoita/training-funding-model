@@ -1,0 +1,143 @@
+format 221
+
+pseudostatecanvas 128009 pseudostate_ref 128649 // initial
+   xyz 61 150 2000
+end
+statecanvas 128137 state_ref 128521 // created
+  
+  xyzwh 179 139 2000 77 43
+end
+statecanvas 128393 state_ref 128649 // submitted
+  
+  xyzwh 293 139 2000 97 43
+end
+statecanvas 128521 state_ref 128777 // accepted
+  
+  xyzwh 448 139 2000 91 43
+end
+statecanvas 128649 state_ref 128905 // funded
+  
+  xyzwh 608 139 2000 75 43
+end
+statecanvas 128777 state_ref 129033 // in Progress
+  
+  xyzwh 732 139 2000 111 43
+end
+statecanvas 128905 state_ref 129161 // succeeded
+  
+  xyzwh 1002 52 2000 141 45
+end
+statecanvas 129033 state_ref 129289 // failed
+  
+  xyzwh 951 197 2000 101 43
+end
+pseudostatecanvas 129289 pseudostate_ref 128905 // final
+   xyz 1389 209 2000
+end
+statecanvas 129417 state_ref 129417 // closed
+  
+  xyzwh 1237 328 2000 79 55
+end
+fragment 135817 "Training-state-diagramm"
+  xyzwh 30 23 2000 1440 405
+end
+transitioncanvas 129929 transition_ref 128649 // <transition>
+  
+  from ref 128009 z 2001 to ref 128137
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130057 transition_ref 128777 // <transition>
+  
+  from ref 128137 z 2001 to ref 128393
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130185 transition_ref 128905 // <transition>
+  
+  from ref 128393 z 2001 to ref 128521
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130313 transition_ref 129033 // <transition>
+  
+  from ref 128521 z 2001 to ref 128649
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130441 transition_ref 129161 // <transition>
+  
+  from ref 128649 z 2001 to ref 128777
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130569 transition_ref 129289 // <transition>
+  
+  from ref 128777 z 2001 to ref 128905
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130697 transition_ref 129417 // <transition>
+  
+  from ref 128777 z 2001 to ref 129033
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130825 transition_ref 129545 // <transition>
+  
+  from ref 128905 z 2001 to ref 129289
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 130953 transition_ref 129673 // <transition>
+  
+  from ref 129033 z 2001 to ref 129289
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131081 transition_ref 129801 // <transition>
+  geometry VH
+  
+  from ref 128137 z 2001 to point 214 353
+  line 132361 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131209 transition_ref 129929 // <transition>
+  geometry VH
+  
+  from ref 128393 z 2001 to point 338 353
+  line 132489 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131337 transition_ref 130057 // <transition>
+  geometry VH
+  
+  from ref 128521 z 2001 to point 491 353
+  line 132617 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131465 transition_ref 130185 // <transition>
+  geometry VH
+  
+  from ref 128649 z 2001 to point 643 353
+  line 132745 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 131593 transition_ref 130313 // <transition>
+  geometry VH
+  
+  from ref 128777 z 2001 to point 785 353
+  line 132873 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 133001 transition_ref 130569 // <transition>
+  geometry VH
+  
+  from ref 128905 z 2001 to point 1070 353
+  line 135561 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 134665 transition_ref 130697 // <transition>
+  geometry VH
+  
+  from ref 129033 z 2001 to point 998 353
+  line 135177 z 2001 to ref 129417
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 135689 transition_ref 130825 // <transition>
+  
+  from ref 129417 z 2001 to ref 129289
+  write_horizontally default show_definition default drawing_language default
+end
+end

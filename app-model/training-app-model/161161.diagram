@@ -1,0 +1,11 @@
+format 221
+
+activitypartitioncanvas 128521 activitypartition_ref 128137 // Careeradvisor
+  xyzwh 134 102 2000 291 200
+end
+activityactioncanvas 128649 activityaction_ref 128137 // activity action fff
+  
+  show_opaque_action_definition default
+  xyzwh 237 178 2005 100 60
+end
+end

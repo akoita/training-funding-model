@@ -1,19 +1,28 @@
 window_sizes 2880 1526 567 2306 1296 168
 
 diagrams
-  active  classdiagram_ref 147721 // asset-digramm
-    2582 1419 100 A1 48 0
+  classdiagram_ref 147721 // asset-digramm
+    2582 1419 100 A1 96 0
   classdiagram_ref 154249 // contract-diagramm
     2306 1296 100 A1 0 0
+  statediagram_ref 160777 // state-diagram
+    1844 1036 100 A1 0 0
+  usecasediagram_ref 161033 // use-case-diagramm
+    1844 1036 100 A2 0 0
+  active  activitydiagram_ref 167561 // training-activity-diagram
+    2306 1296 100 A2 0 0
 end
 show_stereotypes
-selected attribute_ref 137097 // id
+marked
+  activityaction_ref 128137 // activity action submitApplication
+end
+selected activityaction_ref 128137 // activity action submitApplication
 open
-  classdiagram_ref 128137 // package-diagramm
-  attribute_ref 130441 // firstName
-  attribute_ref 130569 // lastName
-  class_ref 156425 // AbstractTrainingParticipant
-  classview_ref 147721 // contract-view
+  classdiagram_ref 128137 // package-diagram
+  state_ref 128009 // trainingOffer-state-machine
+  state_ref 129289 // failed
+  activity_ref 128009 // training-activity
+  usecaseview_ref 128009 // use-case-view
   
   package_ref 134793 // hlf-app-profile
 end

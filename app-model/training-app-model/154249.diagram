@@ -2,27 +2,27 @@ format 221
 
 classcanvas 128009 class_ref 149641 // TrainingOfferContract
   classdiagramsettings member_max_width 0 end
-  xyz 521 199 2000
+  xyzwh 294 63 2000 349 239
 end
 classcanvas 128265 class_ref 148617 // TrainingOffer
   classdiagramsettings member_max_width 0 end
-  xyzwh 557 684 2000 217 125
+  xyzwh 365 691 2000 217 125
 end
 classcanvas 128649 class_ref 149257 // Training
   classdiagramsettings member_max_width 0 end
-  xyzwh 985 696 2006 169 103
+  xyzwh 912 704 2006 265 105
 end
 classcanvas 128905 class_ref 156169 // TrainingContract
   classdiagramsettings member_max_width 0 end
-  xyzwh 912 189 2000 297 207
+  xyzwh 829 63 2000 297 249
 end
 classcanvas 129033 class_ref 149385 // Candidate
   classdiagramsettings member_max_width 0 end
-  xyzwh 1520 693 2012 169 103
+  xyzwh 1442 694 2012 249 113
 end
 classcanvas 129673 class_ref 156297 // CondidateContract
   classdiagramsettings member_max_width 0 end
-  xyzwh 1435 197 2000 307 183
+  xyzwh 1425 65 2000 303 239
 end
 relationcanvas 128393 relation_ref 158601 // <dependency>
   from ref 128009 z 2001 to ref 128265
@@ -31,28 +31,35 @@ relationcanvas 128393 relation_ref 158601 // <dependency>
 end
 relationcanvas 128777 relation_ref 151689 // <composition>
   from ref 128649 z 2007 to ref 128265
-  role_a_pos 783 722 3000 no_role_b
-  multiplicity_a_pos 783 755 3000 no_multiplicity_b
+  role_a_pos 591 729 3000 no_role_b
+  multiplicity_a_pos 591 762 3000 no_multiplicity_b
 end
 relationcanvas 129289 relation_ref 152073 // <composition>
   from ref 128649 z 2013 to ref 129033
-  role_a_pos 1440 720 3000 no_role_b
-  multiplicity_a_pos 1500 753 3000 no_multiplicity_b
+  role_a_pos 1362 726 3000 no_role_b
+  multiplicity_a_pos 1422 759 3000 no_multiplicity_b
 end
 relationcanvas 129417 relation_ref 158857 // <dependency>
+  decenter_end 342
   from ref 128905 z 2007 to ref 128649
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129545 relation_ref 158985 // <dependency>
-  decenter_begin 689
+  decenter_begin 861
   from ref 128905 z 2013 to ref 129033
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129929 relation_ref 159241 // <dependency>
-  decenter_begin 533
+  decenter_begin 532
+  decenter_end 614
   from ref 129673 z 2013 to ref 129033
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130313 relation_ref 172809 // <dependency>
+  from ref 128905 z 2001 to ref 128265
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

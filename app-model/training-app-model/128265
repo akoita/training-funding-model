@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 7
+  revision 13
   modified_by 9 "koita"
   // class settings
   
@@ -147,6 +147,17 @@ ${items}};
       explicit_switch_type ""
       mysql_decl ""
       
+      attribute 151305 "Beginner"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
       attribute 128265 "Intermediate"
 	public type class_ref 148745 // TrainingOfferLevel
 	cpp_decl ""
@@ -172,6 +183,7 @@ ${items}};
       classrelation 154377 // <composition>
 	relation_ref 151305 // <composition>
       end
+
     end
 
     class 148873 "TrainingAppLifecycleStatus"
@@ -276,6 +288,30 @@ ${members}};
 "
 	    classrelation_ref 163721 // <composition>
       end
+
+      attribute 150921 "created"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 151049 "modified"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
     end
 
     class 149129 "Domain"
@@ -299,7 +335,7 @@ ${items}};
       explicit_switch_type ""
       mysql_decl ""
       
-      attribute 129289 "SoftwareDeveloper"
+      attribute 129289 "SoftwareEngineering"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
@@ -310,7 +346,7 @@ ${items}};
 	MysqlColumn
       end
 
-      attribute 129417 "ProjectManager"
+      attribute 129417 "Education"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
@@ -321,7 +357,7 @@ ${items}};
 	MysqlColumn
       end
 
-      attribute 129545 "Language"
+      attribute 129545 "Health"
 	public type class_ref 149129 // Domain
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
@@ -334,6 +370,17 @@ ${items}};
 
       classrelation 154633 // <composition>
 	relation_ref 151433 // <composition>
+      end
+
+      attribute 151433 "Others"
+	public type class_ref 149129 // Domain
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
@@ -459,7 +506,7 @@ ${members}};
       end
     end
 
-    class 149513 "TrainingAppGraduationStatus"
+    class 149513 "TrainingProcessStatus"
       visibility package stereotype "enum"
       cpp_decl "${comment}enum ${name} {
 ${items}};
@@ -480,8 +527,8 @@ ${items}};
       explicit_switch_type ""
       mysql_decl ""
       
-      attribute 130313 "InProgress"
-	public type class_ref 149513 // TrainingAppGraduationStatus
+      attribute 143625 "NotSubmitted"
+	public type class_ref 149513 // TrainingProcessStatus
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
@@ -491,7 +538,51 @@ ${items}};
 	MysqlColumn
       end
 
-      attribute 129929 "succeeded"
+      attribute 143753 "Submitted"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143881 "Accecpted"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 144009 "Funded"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130313 "InProgress"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129929 "Succeeded"
 	private explicit_type ""
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
@@ -502,8 +593,8 @@ ${items}};
 	MysqlColumn
       end
 
-      attribute 130057 "failed"
-	public type class_ref 149513 // TrainingAppGraduationStatus
+      attribute 130057 "Failed"
+	public type class_ref 149513 // TrainingProcessStatus
 	cpp_decl ""
 	java_decl "  ${@}${name}${value},${comment}"
 	php_decl ""
@@ -518,7 +609,7 @@ ${items}};
       end
     end
 
-    class 156425 "AbstractTrainingParticipant"
+    class 156425 "Participant"
       visibility package stereotype "app-profile:Participant"
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -553,6 +644,43 @@ ${members}};
 
       classrelation 163721 // <composition>
 	relation_ref 159753 // <composition>
+      end
+
+      attribute 150537 "name"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 150665 "msp"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 150793 "certificates"
+	private explicit_type ""
+	multiplicity "*"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
   end
@@ -738,6 +866,18 @@ ${members}};
 	
       end
 
+      operation 149641 "acceptTraining"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
       operation 135561 "fundTraining"
 	public explicit_return_type "void"
 	nparams 0
@@ -762,7 +902,7 @@ ${members}};
 	
       end
 
-      operation 135817 "certifyCandidate"
+      operation 135817 "pass"
 	public explicit_return_type "void"
 	nparams 0
 	
@@ -774,7 +914,7 @@ ${members}};
 	
       end
 
-      operation 135945 "failCandidate"
+      operation 135945 "fail"
 	public explicit_return_type "void"
 	nparams 0
 	
@@ -810,6 +950,25 @@ ${members}};
 	  a public
 	    classrelation_ref 162697 // <dependency>
 	  b parent class_ref 149385 // Candidate
+      end
+
+      operation 143113 "searchTrainingByProcessStatus"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 176777 // <dependency>
+	relation 172809 -_->
+	  a public
+	    classrelation_ref 176777 // <dependency>
+	  b parent class_ref 148617 // TrainingOffer
       end
     end
 
@@ -876,6 +1035,502 @@ ${members}};
 	    classrelation_ref 162953 // <dependency>
 	  b parent class_ref 149385 // Candidate
       end
+
+      operation 142985 "searchCandidate"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+  end
+
+  classview 154249 "state-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    state 128009 "trainingOffer-state-machine"
+      stereotype "machine"
+      statediagram 160777 "state-diagram"
+	statediagramsettings
+	 end
+	size A1
+      end
+
+      state 128137 "created"
+	transition 128265 "<transition>"
+	  on state_ref 128265 // closed
+	  external 
+	end
+      end
+
+      pseudostate 128137 final 
+      end
+
+      state 128265 "closed"
+	transition 128137 "<transition>"
+	  on pseudostate_ref 128137 // final
+	  external 
+	end
+      end
+
+      pseudostate 128393 initial 
+	transition 128521 "<transition>"
+	  on state_ref 128137 // created
+	  external 
+	end
+      end
+    end
+
+    state 128393 "training-state-machine"
+      stereotype "machine"
+      statediagram 160905 "training-state-diagramm"
+	statediagramsettings
+	 end
+	size A2
+      end
+
+      pseudostate 128649 initial 
+	transition 128649 "<transition>"
+	  on state_ref 128521 // created
+	  external 
+	end
+      end
+
+      state 128521 "created"
+	transition 128777 "<transition>"
+	  on state_ref 128649 // submitted
+	  external 
+	end
+
+	transition 129801 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      state 128649 "submitted"
+	transition 128905 "<transition>"
+	  on state_ref 128777 // accepted
+	  external 
+	end
+
+	transition 129929 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      state 128777 "accepted"
+	transition 129033 "<transition>"
+	  on state_ref 128905 // funded
+	  external 
+	end
+
+	transition 130057 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      state 128905 "funded"
+	transition 129161 "<transition>"
+	  on state_ref 129033 // in Progress
+	  external 
+	end
+
+	transition 130185 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      state 129033 "in Progress"
+	state 129161 "succeeded"
+	  transition 129545 "<transition>"
+	    on pseudostate_ref 128905 // final
+	    external 
+	  end
+
+	  transition 130569 "<transition>"
+	    on state_ref 129417 // closed
+	    external 
+	  end
+	end
+
+	transition 129289 "<transition>"
+	  on state_ref 129161 // succeeded
+	  external 
+	end
+
+	transition 129417 "<transition>"
+	  on state_ref 129289 // failed
+	  external 
+	end
+
+	transition 130313 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      state 129289 "failed"
+	transition 129673 "<transition>"
+	  on pseudostate_ref 128905 // final
+	  external 
+	end
+
+	transition 130441 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+
+	transition 130697 "<transition>"
+	  on state_ref 129417 // closed
+	  external 
+	end
+      end
+
+      pseudostate 128905 final 
+      end
+
+      state 129417 "closed"
+	transition 130825 "<transition>"
+	  on pseudostate_ref 128905 // final
+	  external 
+	end
+      end
+    end
+
+    activity 128009 "training-activity"
+      activitydiagram 167561 "training-activity-diagram"
+	activitydiagramsettings
+	 end
+	size A2
+      end
+
+      activitypartition 128009 "Career Advisor"
+      end
+
+      activitypartition 128137 "Training Company"
+      end
+
+      activitypartition 128265 "Investor"
+      end
+
+      activitynode 128009 initial_node ""
+	flow 128009 "<flow>"
+	  on activityaction_ref 128009 // activity action createTraining
+	end
+      end
+
+      activityaction 128009 "createTraining"
+	opaque_action
+	flow 128777 "<flow>"
+	  on activityaction_ref 128137 // activity action submitApplication
+	end
+
+      end
+
+      activityaction 128137 "submitApplication"
+	opaque_action
+	flow 135305 "<flow>"
+	  on activityaction_ref 128265 // activity action AcceptApplication
+	end
+
+	flow 135945 "<flow>"
+	  on activityaction_ref 135433 // activity action CloseTraining
+	end
+      end
+
+      activityaction 128265 "AcceptApplication"
+	opaque_action
+	flow 135433 "<flow>"
+	  on activityaction_ref 128393 // activity action FundTraining
+	end
+      end
+
+      activityaction 128393 "FundTraining"
+	opaque_action
+	flow 135561 "<flow>"
+	  on activityaction_ref 134921 // activity action StartTraining
+	end
+      end
+
+      activityaction 134921 "StartTraining"
+	opaque_action
+	flow 136201 "<flow>"
+	  on activityaction_ref 135049 // activity action Pass
+	end
+
+	flow 136329 "<flow>"
+	  on activityaction_ref 135177 // activity action Fail
+	end
+      end
+
+      activityaction 135049 "Pass"
+	opaque_action
+      end
+
+      activityaction 135177 "Fail"
+	opaque_action
+      end
+
+      activityaction 135433 "CloseTraining"
+	opaque_action
+      end
+
+    end
+  end
+
+  usecaseview 128009 "use-case-view"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    usecasediagram 161033 "use-case-diagramm"
+      usecasediagramsettings end
+      size A2
+    end
+
+    class 162953 "TrainingCompany"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 163081 "CareerAdvisor"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 163209 "Investor"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    usecase 128009 "Create Candidate Profile"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128137 "Create Training Offer"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128265 "Submit An Application for a Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128393 "Fund a Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128521 "Accept An Application for a Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128649 "Start a Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128777 "Validate a Training"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
     end
   end
 end

@@ -1,0 +1,55 @@
+format 221
+
+subject 128009 "Training Process"
+  xyzwh 861 111 2000 488 717
+classcanvas 128137 class_ref 162953 // TrainingCompany
+  simpleclassdiagramsettings end
+  xyz 525 585 2000
+end
+classcanvas 128265 class_ref 163081 // CareerAdvisor
+  simpleclassdiagramsettings end
+  xyz 539 184 2000
+end
+classcanvas 128393 class_ref 163209 // Investor
+  simpleclassdiagramsettings end
+  xyz 539 400 2000
+end
+usecasecanvas 128521 usecase_ref 128009 // Create Candidate Profile
+  xyzwh 1143 142 3005 64 32 label_xy 1088 175
+end
+usecasecanvas 128777 usecase_ref 128137 // Create Training Offer
+  xyzwh 1143 432 3005 64 32 label_xy 1107 465
+end
+usecasecanvas 128905 usecase_ref 128265 // Submit An Application for a Training
+  xyzwh 1143 243 3005 64 32 label_xy 1053 275
+end
+usecasecanvas 129033 usecase_ref 128393 // Fund a Training
+  xyzwh 1141 326 3005 64 32 label_xy 1129 368
+end
+usecasecanvas 129673 usecase_ref 128521 // Accept An Application for a Training
+  xyzwh 1143 521 3005 64 32 label_xy 1050 553
+end
+usecasecanvas 129801 usecase_ref 128649 // Start a Training
+  xyzwh 1143 599 3005 64 32 label_xy 1122 631
+end
+usecasecanvas 129929 usecase_ref 128777 // Validate a Training
+  xyzwh 1143 704 3005 64 32 label_xy 1089 737
+end
+fragment 131593 "Training Use Case Diagram"
+  xyzwh 377 65 2000 994 787
+end
+line 128649 --->
+  from ref 128265 z 3006 to ref 128521
+line 129545 --->
+  from ref 128265 z 3006 to ref 128905
+line 130057 --->
+  from ref 128393 z 3011 to ref 129033
+line 130953 ----
+  from ref 128137 z 3006 to ref 128777
+line 131081 --->
+  from ref 128137 z 3006 to ref 129673
+line 131337 --->
+  from ref 128137 z 3006 to ref 129801
+line 131465 --->
+  from ref 128137 z 3011 to ref 129929
+end
