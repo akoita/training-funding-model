@@ -2,7 +2,7 @@ format 221
 
 packagecanvas 128009 
   package_ref 128265 // trainingFundingApp
-    xyzwh 222 173 0 1147 583
+    xyzwh 224 174 0 1353 717
 end
 packagecanvas 128137 
   package_ref 141449 // trainingCompnay
@@ -15,10 +15,6 @@ end
 packagecanvas 128393 
   package_ref 141705 // Investor
     xyzwh 1029 289 2000 265 143
-end
-packagecanvas 128521 
-  package_ref 141833 // Employer
-    xyzwh 1025 505 2000 261 135
 end
 packagecanvas 128649 
   package_ref 141961 // BlockchainCoordinator

@@ -38,7 +38,7 @@ statecanvas 129417 state_ref 129417 // closed
   
   xyzwh 1237 328 2000 79 55
 end
-fragment 135817 "Training-state-diagramm"
+fragment 135817 "Training State Diagram"
   xyzwh 30 23 2000 1440 405
 end
 transitioncanvas 129929 transition_ref 128649 // <transition>
@@ -138,6 +138,11 @@ end
 transitioncanvas 135689 transition_ref 130825 // <transition>
   
   from ref 129417 z 2001 to ref 129289
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 135945 transition_ref 130441 // <transition>
+  
+  from ref 129033 z 2001 to ref 129417
   write_horizontally default show_definition default drawing_language default
 end
 end

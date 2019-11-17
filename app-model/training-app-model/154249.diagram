@@ -20,9 +20,12 @@ classcanvas 129033 class_ref 149385 // Candidate
   classdiagramsettings member_max_width 0 end
   xyzwh 1442 694 2012 249 113
 end
-classcanvas 129673 class_ref 156297 // CondidateContract
+classcanvas 129673 class_ref 156297 // CandidateContract
   classdiagramsettings member_max_width 0 end
   xyzwh 1425 65 2000 303 239
+end
+fragment 130441 "Contract Diagram"
+  xyzwh 276 8 2000 1464 812
 end
 relationcanvas 128393 relation_ref 158601 // <dependency>
   from ref 128009 z 2001 to ref 128265

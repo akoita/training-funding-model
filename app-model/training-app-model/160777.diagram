@@ -1,21 +1,21 @@
 format 221
 
 fragment 128009 "TrainingOffer-state-diagramm"
-  xyzwh 160 31 2000 700 270
+  xyzwh 100 108 2000 409 159
 end
 statecanvas 128265 state_ref 128137 // created
   
-  xyzwh 375 172 2005 77 43
+  xyzwh 178 178 2005 77 43
 end
 pseudostatecanvas 128393 pseudostate_ref 128137 // final
-   xyz 739 176 2005
+   xyz 454 189 2005
 end
 statecanvas 128905 state_ref 128265 // closed
   
-  xyzwh 592 170 2005 71 43
+  xyzwh 325 179 2005 71 43
 end
 pseudostatecanvas 129545 pseudostate_ref 128393 // initial
-   xyz 230 183 2005
+   xyz 111 189 2005
 end
 transitioncanvas 129033 transition_ref 128137 // <transition>
   

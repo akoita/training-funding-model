@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 15
+  revision 16
   modified_by 9 "koita"
   // class settings
   
@@ -971,7 +971,7 @@ ${members}};
       end
     end
 
-    class 156297 "CondidateContract"
+    class 156297 "CandidateContract"
       visibility package stereotype "app-profile:Contract"
       cpp_decl "${comment}${template}class ${name}${inherit} {
 ${members}};
@@ -1074,7 +1074,7 @@ ${members}};
       statediagram 160777 "state-diagram"
 	statediagramsettings
 	 end
-	size A1
+	size A4
       end
 
       state 128137 "created"
@@ -1297,6 +1297,39 @@ ${members}};
 
       activityaction 135433 "CloseTraining"
 	opaque_action
+      end
+    end
+
+    state 135945 "candidate-state-machine"
+      stereotype "machine"
+      statediagram 174089 "candidate-state-diagram"
+	statediagramsettings
+	 end
+	size A4
+      end
+
+      pseudostate 135433 initial 
+	transition 137353 "<transition>"
+	  on state_ref 136073 // created
+	  external 
+	end
+      end
+
+      state 136073 "created"
+	transition 137481 "<transition>"
+	  on state_ref 136201 // closed
+	  external 
+	end
+      end
+
+      state 136201 "closed"
+	transition 137609 "<transition>"
+	  on pseudostate_ref 135561 // final
+	  external 
+	end
+      end
+
+      pseudostate 135561 final 
       end
     end
   end

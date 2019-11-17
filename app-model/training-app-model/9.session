@@ -1,36 +1,6 @@
-window_sizes 2880 1526 567 2306 1296 168
+window_sizes 3840 2004 605 3228 1774 168
 
-diagrams
-  classdiagram_ref 147721 // asset-digramm
-    2582 1419 100 A1 120 0
-  classdiagram_ref 154249 // contract-diagramm
-    2306 1296 100 A1 0 0
-  statediagram_ref 160777 // state-diagram
-    1844 1036 100 A1 0 0
-  active  usecasediagram_ref 161033 // use-case-diagramm
-    2306 1296 100 A1 0 0
-  activitydiagram_ref 167561 // training-activity-diagram
-    2306 1296 100 A2 0 0
-end
 show_stereotypes
-marked
-  activityaction_ref 128137 // activity action submitApplication
-end
-selected usecasediagram_ref 161033 // use-case-diagramm
-open
-  classdiagram_ref 128137 // package-diagram
-  attribute_ref 151305 // Beginner
-  class_ref 149001 // AbstractTrainingAsset
-  class_ref 149129 // Domain
-  attribute_ref 144009 // Funded
-  classrelation_ref 155529 // <composition>
-  class_ref 156425 // Participant
-  operation_ref 149641 // acceptTraining
-  state_ref 128009 // trainingOffer-state-machine
-  state_ref 129289 // failed
-  activity_ref 128009 // training-activity
-  usecaseview_ref 128009 // use-case-view
-  
-  package_ref 134793 // hlf-app-profile
-end
+selected 
+package_ref 129 // training-app-model
 end

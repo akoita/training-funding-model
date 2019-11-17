@@ -1,6 +1,6 @@
 format 221
 "deployment-profile" // deployment-profile
-  revision 2
+  revision 3
   modified_by 9 "koita"
   // class settings
   
@@ -79,6 +79,7 @@ format 221
 	    classrelation_ref 145289 // organization (<unidirectional association>)
 	  b parent class_ref 135049 // Organization
       end
+
     end
 
     class 141833 "Peer"
@@ -103,10 +104,6 @@ format 221
 	  a role_name "channel" multiplicity "*" private
 	    classrelation_ref 143369 // channel (<unidirectional association>)
 	  b parent class_ref 141705 // Channel
-      end
-
-      classrelation 143753 // clientApp (<association>)
-	relation_ref 142473 // <association>
       end
 
       classrelation 145033 // organization (<composition>)
@@ -139,12 +136,11 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "DeploymentNode"
       key "stereotypeIconPath" value ""
-      classrelation 143625 // peer (<association>)
-	relation 142473 ----
+      classrelation 143625 // peer (<unidirectional association>)
+	relation 142473 --->
 	  a role_name "peer" multiplicity "*" private
-	    classrelation_ref 143625 // peer (<association>)
-	  b role_name "clientApp" multiplicity "*" private
-	    classrelation_ref 143753 // clientApp (<association>)
+	    classrelation_ref 143625 // peer (<unidirectional association>)
+	  b multiplicity "*" parent class_ref 141833 // Peer
       end
 
       classrelation 144777 // organization (<composition>)
@@ -157,6 +153,7 @@ format 221
 	    classrelation_ref 145929 // orderer (<unidirectional association>)
 	  b parent class_ref 142089 // Orderer
       end
+
     end
 
     class 142089 "Orderer"
@@ -182,6 +179,13 @@ format 221
 
       classrelation 146825 // <composition>
 	relation_ref 144265 // <composition>
+      end
+
+      classrelation 153353 // channel (<unidirectional association>)
+	relation 150793 --->
+	  a role_name "channel" multiplicity "1..*" private
+	    classrelation_ref 153353 // channel (<unidirectional association>)
+	  b parent class_ref 141705 // Channel
       end
     end
   end

@@ -1,0 +1,35 @@
+format 221
+
+pseudostatecanvas 128009 pseudostate_ref 135433 // initial
+   xyz 69 118 2000
+end
+statecanvas 128137 state_ref 136073 // created
+  
+  xyzwh 123 105 2000 77 43
+end
+statecanvas 128265 state_ref 136201 // closed
+  
+  xyzwh 254 106 2000 71 43
+end
+pseudostatecanvas 128393 pseudostate_ref 135561 // final
+   xyz 384 114 2000
+end
+fragment 128905 "Candidate State Diagram"
+  xyzwh 30 48 2000 428 142
+end
+transitioncanvas 128521 transition_ref 137353 // <transition>
+  
+  from ref 128009 z 2001 to ref 128137
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 128649 transition_ref 137481 // <transition>
+  
+  from ref 128137 z 2001 to ref 128265
+  write_horizontally default show_definition default drawing_language default
+end
+transitioncanvas 128777 transition_ref 137609 // <transition>
+  
+  from ref 128265 z 2001 to ref 128393
+  write_horizontally default show_definition default drawing_language default
+end
+end
