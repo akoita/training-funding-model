@@ -1,6 +1,6 @@
 format 221
-"CareerCounselor" // trainingFundingApp::CareerCounselor
-  revision 1
+"CareerAdvisor" // trainingFundingApp::CareerAdvisor
+  revision 2
   modified_by 9 "koita"
   // class settings
   
