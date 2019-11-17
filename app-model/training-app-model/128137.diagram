@@ -2,22 +2,22 @@ format 221
 
 packagecanvas 128009 
   package_ref 128265 // trainingFundingApp
-    xyzwh 224 174 0 1353 717
+    xyzwh 217 169 0 975 521
 end
 packagecanvas 128137 
-  package_ref 141449 // trainingCompnay
-    xyzwh 325 267 2000 259 153
+  package_ref 141449 // TrainingCompnay
+    xyzwh 326 265 2000 279 147
 end
 packagecanvas 128265 
   package_ref 141577 // CareerCounselor
-    xyzwh 325 492 2000 265 155
+    xyzwh 326 490 2000 279 149
 end
 packagecanvas 128393 
   package_ref 141705 // Investor
-    xyzwh 1029 289 2000 265 143
+    xyzwh 810 280 2000 309 133
 end
 packagecanvas 128649 
   package_ref 141961 // BlockchainCoordinator
-    xyzwh 627 362 2000 303 155
+   color orange  xyzwh 811 471 2000 313 149
 end
 end

@@ -26,15 +26,15 @@ relationcanvas 128905 relation_ref 142345 // <unidirectional association>
   from ref 128521 z 2001 to point 1195 605
   line 136841 z 2001 to point 2005 605
   line 136969 z 2001 to ref 128265
-  role_a_pos 1926 472 3000 no_role_b
+  role_a_pos 2017 466 3000 no_role_b
   multiplicity_a_pos 1991 466 3000 no_multiplicity_b
 end
 relationcanvas 129033 relation_ref 142473 // <unidirectional association>
   geometry HV
-  from ref 128649 z 2001 to point 1193 1215
+  from ref 128649 z 2001 to point 1194 1215
   line 139529 z 2001 to ref 128521
   role_a_pos 1206 987 3000 no_role_b
-  multiplicity_a_pos 1180 987 3000 multiplicity_b_pos 1205 1226 3000
+  multiplicity_a_pos 1180 987 3000 multiplicity_b_pos 1206 1226 3000
 end
 relationcanvas 129673 relation_ref 142985 // <composition>
   geometry VH
@@ -64,7 +64,7 @@ relationcanvas 130441 relation_ref 143369 // <association>
   multiplicity_a_pos 1876 1299 3000 multiplicity_b_pos 1378 912 3000
 end
 relationcanvas 130953 relation_ref 143753 // <unidirectional association>
-  decenter_begin 667
+  decenter_begin 666
   decenter_end 699
   from ref 128649 z 2001 to ref 128777
   role_a_pos 1848 1297 3000 no_role_b

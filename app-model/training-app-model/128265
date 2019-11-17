@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 16
+  revision 19
   modified_by 9 "koita"
   // class settings
   
@@ -32,6 +32,32 @@ format 221
   
   stereotype "app-profile:fabricApp"
   java_dir "C:\\dev\\hyperledger\\training-app-uml-models\\generated"
+  classview 128265 "package-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128137 "package-diagram"
+      classdiagramsettings member_max_width 0 end
+      size A1
+    end
+  end
+
   classview 141193 "asset-view"
     
     classdiagramsettings member_max_width 0 end
@@ -683,16 +709,6 @@ ${members}};
       end
     end
   end
-
-  package_ref 141449 // trainingCompnay
-
-  package_ref 141577 // CareerCounselor
-
-  package_ref 141705 // Investor
-
-  package_ref 141833 // Employer
-
-  package_ref 141961 // BlockchainCoordinator
 
   classview 147721 "contract-view"
     
@@ -1677,4 +1693,93 @@ ${members}}
       end
     end
   end
+
+  deploymentview 128009 "deployment-view"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    deploymentdiagram 180617 "deployment-diagram"
+      deploymentdiagramsettings
+       end
+      size A1
+    end
+
+    deploymentnode 128009 "TrainingCompany.Peer"
+      stereotype "deployment-profile:Peer"
+    end
+
+    deploymentnode 128137 "CareerAdvisor.Peer"
+      stereotype "deployment-profile:Peer"
+    end
+
+    deploymentnode 128265 "Investor.Peer"
+      stereotype "deployment-profile:Peer"
+    end
+
+    deploymentnode 128393 "BlockchainCoordinator.Orderer"
+      stereotype "deployment-profile:Orderer"
+    end
+
+    artifact 128009 "TrainingChannel"
+      stereotype "deployment-profile:Channel"
+      associated_artifacts
+      end
+      simplerelation 135049
+	-_->
+	  stereotype "deploy"
+	  on deploymentnode_ref 128393 // BlockchainCoordinator.Orderer
+      end
+
+      simplerelation 135177
+	-_->
+	  stereotype "deploy"
+	  on deploymentnode_ref 128009 // TrainingCompany.Peer
+      end
+
+      simplerelation 135305
+	-_->
+	  stereotype "deploy"
+	  on deploymentnode_ref 128137 // CareerAdvisor.Peer
+      end
+
+      simplerelation 135433
+	-_->
+	  stereotype "deploy"
+	  on deploymentnode_ref 128265 // Investor.Peer
+      end
+    end
+  end
+
+  classview 160777 "deployment-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    associated_deployment_view deploymentview_ref 128009 // deployment-view
+  end
+
+  package_ref 141449 // TrainingCompnay
+
+  package_ref 141577 // CareerCounselor
+
+  package_ref 141705 // Investor
+
+  package_ref 141833 // Employer
+
+  package_ref 141961 // BlockchainCoordinator
 end

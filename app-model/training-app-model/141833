@@ -1,6 +1,6 @@
 format 221
-"TrainingCompnay" // trainingFundingApp::TrainingCompnay
-  revision 2
+"Employer" // trainingFundingApp::Employer
+  revision 1
   modified_by 9 "koita"
   // class settings
   

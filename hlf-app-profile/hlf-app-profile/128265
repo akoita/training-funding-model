@@ -1,6 +1,6 @@
 format 221
 "deployment-profile" // deployment-profile
-  revision 3
+  revision 4
   modified_by 9 "koita"
   // class settings
   
@@ -71,7 +71,7 @@ format 221
       key "stereotypeCheck" value ""
       key "stereotypeSetParameters" value ""
       key "stereotypeCheckParameters" value ""
-      key "stereotypeApplyOn" value "Artifact"
+      key "stereotypeApplyOn" value "Artifact Component"
       key "stereotypeIconPath" value ""
       classrelation 145289 // organization (<unidirectional association>)
 	relation 143241 --->
@@ -79,7 +79,6 @@ format 221
 	    classrelation_ref 145289 // organization (<unidirectional association>)
 	  b parent class_ref 135049 // Organization
       end
-
     end
 
     class 141833 "Peer"
@@ -153,7 +152,6 @@ format 221
 	    classrelation_ref 145929 // orderer (<unidirectional association>)
 	  b parent class_ref 142089 // Orderer
       end
-
     end
 
     class 142089 "Orderer"

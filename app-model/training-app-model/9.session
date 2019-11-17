@@ -1,6 +1,26 @@
 window_sizes 3840 2004 605 3228 1774 168
 
+diagrams
+  deploymentdiagram_ref 180617 // deployment-diagram
+    1514 2284 100 A1 0 0
+  classdiagram_ref 128137 // package-diagram
+    1742 2284 100 A1 0 0
+  active  classdiagram_ref 141193 // deployment-profile-diagramm
+    2582 1419 100 A1 60 0
+end
 show_stereotypes
-selected 
-package_ref 129 // training-app-model
+marked
+  deploymentnode_ref 128265 // Investor.Peer
+end
+selected deploymentnode_ref 128009 // TrainingCompany.Peer
+open
+  classview_ref 128265 // package-view
+  classview_ref 141193 // asset-view
+  deploymentview_ref 128009 // deployment-view
+  
+package_ref 141449 // TrainingCompnay
+  
+package_ref 141961 // BlockchainCoordinator
+  class_ref 141705 // Channel
+end
 end

@@ -1,6 +1,6 @@
 format 221
 "training-app-model"
-  revision 9
+  revision 11
   modified_by 9 "koita"
 
 
@@ -46,32 +46,8 @@ format 221
   
   java_dir "C:\\dev\\hyperledger\\training-app-uml-models\\generated"
   java_package "app"
-  classview 128265 "package-view"
-    
-    classdiagramsettings member_max_width 0 end
-    
-    classcompositediagramsettings end
-    
-    collaborationdiagramsettings end
-    
-    objectdiagramsettings end
-    
-    objectcompositediagramsettings end
-    
-    sequencediagramsettings end
-    
-    statediagramsettings
-     end
-    
-    
-    activitydiagramsettings
-     end
-    classdiagram 128137 "package-diagram"
-      classdiagramsettings member_max_width 0 end
-      size A1
-    end
-  end
-
+  ncouples 1
+  key "html dir" value "C:\\Users\\koita\\Downloads/"
   package_ref 128265 // trainingFundingApp
 
   package_ref 134793 // hlf-app-profile
