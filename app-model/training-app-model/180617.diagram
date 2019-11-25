@@ -35,15 +35,15 @@ fragment 130057 "Training Deployment Diagram"
   xyzwh 116 28 2000 1559 596
 end
 simplerelationcanvas 129033 simplerelation_ref 135049
-  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 1094.5 252.5 3000 to ref 128393
+  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 1094 252 3000 to ref 128393
 end
 simplerelationcanvas 129161 simplerelation_ref 135177
   from ref 128905 z 2001 stereotype "<<deploy>>" xyz 678 254 3000 to ref 128009
 end
 simplerelationcanvas 129289 simplerelation_ref 135305
-  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 658.5 431 3000 to ref 128137
+  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 658 431 3000 to ref 128137
 end
 simplerelationcanvas 129417 simplerelation_ref 135433
-  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 1102 430.5 3000 to ref 128265
+  from ref 128905 z 2001 stereotype "<<deploy>>" xyz 1102 430 3000 to ref 128265
 end
 end

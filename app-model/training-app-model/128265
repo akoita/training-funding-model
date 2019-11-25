@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 19
+  revision 20
   modified_by 9 "koita"
   // class settings
   
@@ -1748,29 +1748,6 @@ ${members}}
 	  on deploymentnode_ref 128265 // Investor.Peer
       end
     end
-  end
-
-  classview 160777 "deployment-view"
-    
-    classdiagramsettings member_max_width 0 end
-    
-    classcompositediagramsettings end
-    
-    collaborationdiagramsettings end
-    
-    objectdiagramsettings end
-    
-    objectcompositediagramsettings end
-    
-    sequencediagramsettings end
-    
-    statediagramsettings
-     end
-    
-    
-    activitydiagramsettings
-     end
-    associated_deployment_view deploymentview_ref 128009 // deployment-view
   end
 
   package_ref 141449 // TrainingCompnay
