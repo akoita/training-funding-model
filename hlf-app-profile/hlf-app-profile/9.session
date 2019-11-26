@@ -1,8 +1,10 @@
 window_sizes 2880 1526 605 2268 1296 168
 
 diagrams
-  active  classdiagram_ref 141193 // deployment-profile-diagramm
-    3228 1774 100 A0 0 0
+  classdiagram_ref 141193 // deployment-profile-diagramm
+    3228 1774 100 A0 264 0
+  active  classdiagram_ref 134665 // app-profile-diagramm
+    2268 1296 94 A1 0 17
 end
 show_stereotypes
 selected classdiagram_ref 134665 // app-profile-diagramm

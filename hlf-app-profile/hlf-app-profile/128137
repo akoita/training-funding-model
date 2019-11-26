@@ -1,6 +1,6 @@
 format 221
 "app-profile" // app-profile
-  revision 5
+  revision 7
   modified_by 9 "koita"
   // class settings
   
@@ -116,7 +116,6 @@ format 221
 	    classrelation_ref 159881 // <generalisation>
 	  b parent class_ref 148617 // Concept
       end
-
     end
 
     classdiagram 134665 "app-profile-diagramm"
@@ -248,6 +247,13 @@ format 221
       explicit_switch_type ""
       mysql_decl ""
       
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "Class Component"
+      key "stereotypeIconPath" value ""
       classrelation 160905 // <composition>
 	relation_ref 157833 // <composition>
       end

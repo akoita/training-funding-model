@@ -2,48 +2,48 @@ format 221
 
 classcanvas 128137 class_ref 134665 // Participant
   classdiagramsettings member_max_width 0 end
-  xyzwh 171.241 378.417 2000 165 85
+  xyzwh 171.341 378.417 2000 165 85
 end
 classcanvas 128265 class_ref 134537 // FabricNetwork
   classdiagramsettings member_max_width 0 end
-  xyzwh 644.615 88.03 2000 329 94
+  xyzwh 644.215 87.83 2000 329 94
 end
 classcanvas 128521 class_ref 134793 // Asset
   classdiagramsettings member_max_width 0 end
-  xyzwh 468.25 375.182 2000 161 89
+  xyzwh 469.45 375.532 2000 160 88
 end
 classcanvas 128777 class_ref 134921 // Contract
   classdiagramsettings member_max_width 0 end
-  xyzwh 325.098 604.397 2000 163 87
+  xyzwh 325.298 604.297 2000 163 87
 end
 classcanvas 128905 class_ref 135049 // Organization
   classdiagramsettings member_max_width 0 end
-  xyzwh 1116.03 74.23 2000 620 110
+  xyzwh 1115.53 73.83 2000 620 110
 end
 classcanvas 130697 class_ref 148617 // Concept
   classdiagramsettings member_max_width 0 end
-  xyzwh 197.48 83.42 2000 402 98
+  xyzwh 197.65 83.33 2000 400 98
 end
 classcanvas 131977 class_ref 141833 // Peer
   classdiagramsettings member_max_width 0 end
-  xyzwh 1452.5 320.77 2006 164 102
+  xyzwh 1453.3 321.47 2006 164 102
 end
 classcanvas 132233 class_ref 141705 // Channel
   classdiagramsettings member_max_width 0 end
-  xyzwh 961.85 329.33 2012 246 94
+  xyzwh 961.65 328.83 2012 246 94
 end
 classcanvas 132617 class_ref 142089 // Orderer
   classdiagramsettings member_max_width 0 end
-  xyzwh 1152.64 566.08 3005 547 129
+  xyzwh 1152.14 566.08 3005 547 129
 end
 classcanvas 133385 class_ref 141961 // ClientApp
   classdiagramsettings member_max_width 0 end
-  xyzwh 1949.83 313.69 3011 211 100
+  xyzwh 1949.63 313.79 3011 211 100
 end
 relationcanvas 129033 relation_ref 134793 // <composition>
   geometry HVr
-  decenter_begin 542
-  from ref 128265 z 2001 to point 820 645
+  decenter_begin 541
+  from ref 128265 z 2001 to point 819 644
   line 131081 z 2001 to ref 128777
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
@@ -77,7 +77,7 @@ relationcanvas 131337 relation_ref 157449 // <generalisation>
 end
 relationcanvas 131721 relation_ref 157705 // <unidirectional association>
   from ref 128521 z 2001 to ref 128137
-  role_a_pos 344 393 3000 no_role_b
+  role_a_pos 344 396 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131849 relation_ref 157833 // <composition>
@@ -94,10 +94,10 @@ end
 relationcanvas 132361 relation_ref 143241 // <unidirectional association>
   geometry VHV
   decenter_end 48
-  from ref 132233 z 2013 to point 1081 254
-  line 136713 z 2013 to point 1144 254
+  from ref 132233 z 2013 to point 1080 253
+  line 136713 z 2013 to point 1142 253
   line 136841 z 2013 to ref 128905
-  role_a_pos 1157 192 3000 no_role_b
+  role_a_pos 1155 192 3000 no_role_b
   multiplicity_a_pos 1112 192 3000 no_multiplicity_b
 end
 relationcanvas 132489 relation_ref 142345 // <unidirectional association>
@@ -107,10 +107,10 @@ relationcanvas 132489 relation_ref 142345 // <unidirectional association>
 end
 relationcanvas 132745 relation_ref 150793 // <unidirectional association>
   geometry VHr
-  from ref 132617 z 3006 to point 1082.48 626.16
+  from ref 132617 z 3006 to point 1081.72 626.52
   line 136073 z 3006 to ref 132233
   role_a_pos 1093 431 3000 no_role_b
-  multiplicity_a_pos 1049 431 3000 no_multiplicity_b
+  multiplicity_a_pos 1050 431 3000 no_multiplicity_b
 end
 relationcanvas 132873 relation_ref 144265 // <composition>
   from ref 128905 z 3006 to ref 132617
@@ -132,7 +132,7 @@ relationcanvas 133513 relation_ref 142473 // <unidirectional association>
 end
 relationcanvas 133641 relation_ref 143753 // <unidirectional association>
   geometry HVr
-  from ref 133385 z 3012 to point 2052.38 628.1
+  from ref 133385 z 3012 to point 2052.36 628.2
   line 135433 z 3012 to ref 132617
   role_a_pos 1708 605 3000 no_role_b
   multiplicity_a_pos 1708 639 3000 no_multiplicity_b
@@ -140,8 +140,8 @@ end
 relationcanvas 133769 relation_ref 142985 // <composition>
   geometry HVH unfixed
   decenter_end 208
-  from ref 128905 z 3012 to point 1840.21 126
-  line 134409 z 3012 to point 1840.21 331.01
+  from ref 128905 z 3012 to point 1840.28 123
+  line 134409 z 3012 to point 1840.28 331
   line 134537 z 3012 to ref 133385
   role_a_pos 1871 308 3000 role_b_pos 1745 100 3000
   multiplicity_a_pos 1932 342 3000 multiplicity_b_pos 1744 134 3000
