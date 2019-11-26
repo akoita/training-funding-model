@@ -1,0 +1,216 @@
+format 221
+"participant-cc" // trainingFundingApp::participant-cc
+  revision 1
+  modified_by 9 "koita"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  classview 161033 "participant-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 187273 "participant-diagramm"
+      classdiagramsettings member_max_width 0 end
+      size A2
+    end
+
+    class 169993 "X509Identities"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 183817 // status (<unidirectional association>)
+	relation 179721 --->
+	  a role_name "status" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 183817 // status (<unidirectional association>)
+	  b parent class_ref 148873 // TrainingAppLifecycleStatus
+      end
+
+      attribute 158089 "fingerprint"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 184585 // <composition>
+	relation_ref 180105 // <composition>
+      end
+    end
+
+    class 170121 "AbstractTrainingParticipantModel"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 184073 // <generalisation>
+	relation 179849 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 184073 // <generalisation>
+	  b parent class_ref 169737 // AbstractTrainingConceptModel
+      end
+
+      attribute 158217 "name"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 158345 "msp"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 184457 // identities (<composition>)
+	relation 180105 *---
+	  a role_name "identities" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 184457 // identities (<composition>)
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 184585 // <composition>
+      end
+    end
+
+    class 170249 "CareerAdvisorParticipant"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 184713 // <generalisation>
+	relation 180233 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 184713 // <generalisation>
+	  b parent class_ref 170121 // AbstractTrainingParticipantModel
+      end
+    end
+
+    class 170377 "TrainingCompanyParticipant"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 184841 // <generalisation>
+	relation 180361 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 184841 // <generalisation>
+	  b parent class_ref 170121 // AbstractTrainingParticipantModel
+      end
+    end
+
+    class 170505 "InvestorParticipant"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 184969 // <generalisation>
+	relation 180489 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 184969 // <generalisation>
+	  b parent class_ref 170121 // AbstractTrainingParticipantModel
+      end
+    end
+  end
+end

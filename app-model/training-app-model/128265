@@ -1,6 +1,6 @@
 format 221
 "trainingFundingApp" // trainingFundingApp
-  revision 20
+  revision 21
   modified_by 9 "koita"
   // class settings
   
@@ -211,54 +211,6 @@ ${items}};
       end
     end
 
-    class 148873 "TrainingAppLifecycleStatus"
-      visibility package stereotype "enum"
-      cpp_decl "${comment}enum ${name} {
-${items}};
-"
-      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
-${items};
-${members}}
-"
-      php_decl "${comment}${visibility}final class ${name} {
-${items}}
-"
-      python_2_2 python_decl "class ${name}:
-${docstring}${members}
-"
-      idl_decl "${comment}enum ${name} {
-${items}};
-"
-      explicit_switch_type ""
-      mysql_decl ""
-      
-      attribute 128521 "open"
-	public type class_ref 148873 // TrainingAppLifecycleStatus
-	cpp_decl ""
-	java_decl "  ${@}${name}${value},${comment}"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      attribute 128649 "closed"
-	public type class_ref 148873 // TrainingAppLifecycleStatus
-	cpp_decl ""
-	java_decl "  ${@}${name}${value},${comment}"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	mysql_decl ""
-	MysqlColumn
-      end
-
-      classrelation 154121 // <composition>
-	relation_ref 151177 // <composition>
-      end
-    end
-
     class 149001 "AbstractTrainingAsset"
       visibility package stereotype "app-profile:Asset"
       cpp_decl "${comment}${template}class ${name}${inherit} {
@@ -302,16 +254,13 @@ ${members}};
 	    classrelation_ref 154121 // <composition>
       end
 
-      classrelation 163593 // owners (<composition>)
-	relation 159753 *---
-	  a role_name "owners" multiplicity "1..*" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 163593 // owners (<composition>)
-	  b role_name "" private
+      classrelation 163593 // owner (<unidirectional association>)
+	relation 159753 --->
+	  a role_name "owner" multiplicity "1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 163721 // <composition>
+	    classrelation_ref 163593 // owner (<unidirectional association>)
+	  b parent class_ref 156425 // Participant
       end
 
       attribute 150921 "created"
@@ -665,10 +614,6 @@ ${members}};
 	idl_decl ""
 	mysql_decl ""
 	MysqlColumn
-      end
-
-      classrelation 163721 // <composition>
-	relation_ref 159753 // <composition>
       end
 
       attribute 150537 "name"
@@ -1759,4 +1704,16 @@ ${members}}
   package_ref 141833 // Employer
 
   package_ref 141961 // BlockchainCoordinator
+
+  package_ref 148489 // candidate-cc
+
+  package_ref 148617 // common-cc
+
+  package_ref 148745 // participant-cc
+
+  package_ref 148873 // training-cc
+
+  package_ref 149001 // trainingOffer-cc
+
+  package_ref 149129 // webapp
 end

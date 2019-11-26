@@ -1,0 +1,69 @@
+format 221
+
+classcanvas 128009 class_ref 169993 // X509Identities
+  classdiagramsettings member_max_width 0 end
+  xyzwh 286 399 2000 227 79
+end
+classcanvas 128137 class_ref 148873 // TrainingAppLifecycleStatus
+  classdiagramsettings member_max_width 0 end
+  xyz 286 113 2000
+end
+classcanvas 128393 class_ref 170121 // AbstractTrainingParticipantModel
+  classdiagramsettings member_max_width 0 end
+  xyz 732 399 2000
+end
+classcanvas 128521 class_ref 169737 // AbstractTrainingConceptModel
+  classdiagramsettings member_max_width 0 end
+  xyzwh 732 118 2006 271 103
+end
+classcanvas 129673 class_ref 170249 // CareerAdvisorParticipant
+  classdiagramsettings member_max_width 0 end
+  xyz 519 631 2000
+end
+classcanvas 129801 class_ref 170377 // TrainingCompanyParticipant
+  classdiagramsettings member_max_width 0 end
+  xyz 786 630 2000
+end
+classcanvas 129929 class_ref 170505 // InvestorParticipant
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1075 633 2000 207 43
+end
+relationcanvas 128265 relation_ref 179721 // <unidirectional association>
+  from ref 128009 z 2001 to ref 128137
+  role_a_pos 409 224 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128649 relation_ref 179465 // <unidirectional association>
+  geometry HVr
+  from ref 128521 z 2007 to point 730 162
+  line 129161 z 2007 to ref 128137
+  role_a_pos 522 140 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128777 relation_ref 179849 // <generalisation>
+  from ref 128393 z 2007 to ref 128521
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129033 relation_ref 180105 // <composition>
+  from ref 128393 z 2001 to ref 128009
+  role_a_pos 522 414 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130057 relation_ref 180233 // <generalisation>
+  from ref 129673 z 2001 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130185 relation_ref 180361 // <generalisation>
+  decenter_begin 330
+  from ref 129801 z 2001 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130313 relation_ref 180489 // <generalisation>
+  from ref 129929 z 2001 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end
