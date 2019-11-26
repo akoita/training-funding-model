@@ -1,6 +1,6 @@
 format 221
 "common-cc" // trainingFundingApp::common-cc
-  revision 2
+  revision 4
   modified_by 9 "koita"
   // class settings
   
@@ -92,7 +92,6 @@ ${items}};
 	mysql_decl ""
 	MysqlColumn
       end
-
     end
 
     classdiagram 187145 "common-diagramm"
@@ -101,7 +100,7 @@ ${items}};
     end
 
     class 169737 "AbstractTrainingConceptModel"
-      visibility package 
+      visibility package stereotype "app-profile:Concept"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}

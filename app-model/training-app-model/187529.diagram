@@ -10,11 +10,15 @@ classcanvas 128521 class_ref 148745 // TrainingOfferLevel
 end
 classcanvas 128777 class_ref 169865 // AbstractTrainingAsset
   classdiagramsettings member_max_width 0 end
-  xyz 383 71 2000
+  xyz 381 22 2000
 end
 classcanvas 129033 class_ref 149129 // TrainingDomain
   classdiagramsettings member_max_width 0 end
   xyz 777 299 2006
+end
+classcanvas 129417 class_ref 149641 // TrainingOfferContract
+  classdiagramsettings member_max_width 0 end
+  xyz 335 406 2006
 end
 relationcanvas 128649 relation_ref 151305 // <composition>
   from ref 128393 z 2007 to ref 128521
@@ -29,7 +33,12 @@ end
 relationcanvas 129161 relation_ref 151433 // <composition>
   from ref 128393 z 2007 to point 765 337
   line 129289 z 2007 to ref 129033
-  role_a_pos 708 296 3000 no_role_b
+  role_a_pos 714 321 3000 no_role_b
   multiplicity_a_pos 757 354 3000 no_multiplicity_b
+end
+relationcanvas 129545 relation_ref 158601 // <dependency>
+  from ref 129417 z 2007 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
 end
 end

@@ -22,8 +22,12 @@ marked
   class_ref 148745 // TrainingOfferLevel
   class_ref 149257 // Training
 end
-selected classdiagram_ref 134665 // app-profile-diagramm
+selected 
+  package_ref 134793 // hlf-app-profile
 open
+  classview_ref 128137 // app-profile-view
+  
+  package_ref 134921 // deployment-profile
   classdiagram_ref 128137 // organization-viewe-diagram
   classview_ref 141193 // asset-view
   
@@ -36,8 +40,5 @@ open
   classview_ref 161033 // participant-view
   classview_ref 167817 // training-view
   class_ref 148617 // TrainingOffer
-  classview_ref 128137 // app-profile-view
-  
-  package_ref 134921 // deployment-profile
 end
 end

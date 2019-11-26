@@ -1,6 +1,6 @@
 format 221
 "candidate-cc" // trainingFundingApp::candidate-cc
-  revision 2
+  revision 4
   modified_by 9 "koita"
   // class settings
   
@@ -106,6 +106,83 @@ ${members}};
 	    java "${type}"
 	    classrelation_ref 191625 // <generalisation>
 	  b parent class_ref 169865 // AbstractTrainingAsset
+      end
+    end
+
+    class 156297 "CandidateContract"
+      visibility package stereotype "app-profile:Contract"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136073 "createCandidate"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136201 "listCandidates"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136329 "disableCandidate"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 162953 // <dependency>
+	relation 159241 -_->
+	  a public
+	    classrelation_ref 162953 // <dependency>
+	  b parent class_ref 149385 // Candidate
+      end
+
+      operation 142985 "searchCandidate"
+	public explicit_return_type "void"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
       end
     end
   end

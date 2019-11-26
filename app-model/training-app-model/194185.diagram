@@ -2,23 +2,23 @@ format 221
 
 packagecanvas 128009 
   package_ref 148617 // common-cc
-    xyzwh 261 9 2000 1405 309
+  name_in_tab yes  xyzwh 259 8 2000 1405 309
 end
 classcanvas 128137 class_ref 169737 // AbstractTrainingConceptModel
   classdiagramsettings member_max_width 0 end
-  xyz 1206 54 2005
+  xyz 1189 52 2005
 end
 classcanvas 128265 class_ref 169865 // AbstractTrainingAsset
   classdiagramsettings member_max_width 0 end
-  xyzwh 474 196 2011 253 67
+  xyzwh 472 195 2011 253 67
 end
 packagecanvas 128777 
   package_ref 148745 // participant-cc
-    xyzwh 308 673 2000 1309 335
+  name_in_tab yes  xyzwh 308 673 2000 1309 335
 end
 classcanvas 128905 class_ref 169993 // X509Identities
   classdiagramsettings member_max_width 0 end
-  xyzwh 626 736 2017 251 67
+  xyzwh 628 750 2017 251 81
 end
 classcanvas 129161 class_ref 170121 // AbstractTrainingParticipantModel
   classdiagramsettings member_max_width 0 end
@@ -38,27 +38,27 @@ classcanvas 130057 class_ref 170505 // InvestorParticipant
 end
 packagecanvas 130313 
   package_ref 148489 // candidate-cc
-    xyzwh 40 352 2000 259 189
+  name_in_tab yes  xyzwh 42 381 2000 307 191
 end
 classcanvas 130441 class_ref 149385 // Candidate
   classdiagramsettings member_max_width 0 end
-  xyz 92 409 2017
+  xyzwh 55 433 2017 199 105
 end
 packagecanvas 130825 
   package_ref 148873 // training-cc
-    xyzwh 400 352 2000 307 185
+  name_in_tab yes  xyzwh 456 388 2000 307 185
 end
 classcanvas 130953 class_ref 149257 // Training
   classdiagramsettings member_max_width 0 end
-  xyzwh 557 418 2023 89 93
+  xyzwh 530 442 2023 171 89
 end
 packagecanvas 131593 
   package_ref 149001 // trainingOffer-cc
-    xyzwh 847 354 2000 353 189
+  name_in_tab yes  xyzwh 853 388 2000 391 189
 end
 classcanvas 131849 class_ref 148617 // TrainingOffer
   classdiagramsettings member_max_width 0 end
-  xyzwh 983 415 2029 195 103
+  xyzwh 1027 439 2029 213 103
 end
 relationcanvas 128393 relation_ref 179593 // <generalisation>
   from ref 128265 z 2012 to ref 128137
@@ -72,7 +72,7 @@ relationcanvas 129289 relation_ref 179849 // <generalisation>
 end
 relationcanvas 129417 relation_ref 180105 // <composition>
   from ref 129161 z 2024 to ref 128905
-  role_a_pos 886 747 3000 no_role_b
+  role_a_pos 888 764 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 129673 relation_ref 180233 // <generalisation>
@@ -97,8 +97,8 @@ relationcanvas 130569 relation_ref 187145 // <generalisation>
 end
 relationcanvas 131081 relation_ref 152073 // <unidirectional association>
   from ref 130953 z 2024 to ref 130441
-  role_a_pos 192 436 3000 no_role_b
-  multiplicity_a_pos 192 469 3000 no_multiplicity_b
+  role_a_pos 263 461 3000 no_role_b
+  multiplicity_a_pos 263 494 3000 no_multiplicity_b
 end
 relationcanvas 131209 relation_ref 187273 // <generalisation>
   from ref 130953 z 2024 to ref 128265
@@ -112,8 +112,8 @@ relationcanvas 131977 relation_ref 187017 // <generalisation>
 end
 relationcanvas 132105 relation_ref 151689 // <unidirectional association>
   from ref 130953 z 2030 to ref 131849
-  role_a_pos 873 441 3000 no_role_b
-  multiplicity_a_pos 963 474 3000 no_multiplicity_b
+  role_a_pos 917 465 3000 no_role_b
+  multiplicity_a_pos 1007 498 3000 no_multiplicity_b
 end
 relationcanvas 132745 relation_ref 187401 // <unidirectional association>
   from ref 128265 z 2024 to ref 129161

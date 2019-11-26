@@ -1,6 +1,6 @@
 format 221
 "deployment-profile" // hlf-app-profile::deployment-profile
-  revision 4
+  revision 6
   modified_by 9 "koita"
   // class settings
   
@@ -56,7 +56,7 @@ format 221
     classdiagram 141193 "deployment-profile-diagramm"
       classdiagramsettings member_max_width 0 end
       oid 141193
-      size A1
+      size A0
     end
 
     class 141705 "Channel"
@@ -75,7 +75,7 @@ format 221
       key "stereotypeCheck" value ""
       key "stereotypeSetParameters" value ""
       key "stereotypeCheckParameters" value ""
-      key "stereotypeApplyOn" value "Artifact"
+      key "stereotypeApplyOn" value "Artifact Component"
       key "stereotypeIconPath" value ""
       classrelation 145289 // organization (<unidirectional association>)
 	relation 143241 --->
@@ -114,11 +114,6 @@ format 221
 	oid 143369
       end
 
-      classrelation 143753 // <association>
-	relation_ref 142473 // <association>
-	oid 143753
-      end
-
       classrelation 145033 // organization (<composition>)
 	relation_ref 143113 // <composition>
 	oid 145033
@@ -153,13 +148,12 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "DeploymentNode"
       key "stereotypeIconPath" value ""
-      classrelation 143625 // peer (<association>)
-	relation 142473 ----
+      classrelation 143625 // peer (<unidirectional association>)
+	relation 142473 --->
 	  oid 142473
 	  a role_name "peer" multiplicity "*" private
-	    classrelation_ref 143625 // peer (<association>)
-	  b role_name "clientApp" multiplicity "*" private
-	    classrelation_ref 143753 // <association>
+	    classrelation_ref 143625 // peer (<unidirectional association>)
+	  b multiplicity "*" parent class_ref 141833 // Peer
 	oid 143625
       end
 
@@ -204,6 +198,15 @@ format 221
       classrelation 146825 // <composition>
 	relation_ref 144265 // <composition>
 	oid 146825
+      end
+
+      classrelation 153353 // channel (<unidirectional association>)
+	relation 150793 --->
+	  oid 150793
+	  a role_name "channel" multiplicity "1..*" private
+	    classrelation_ref 153353 // channel (<unidirectional association>)
+	  b parent class_ref 141705 // Channel
+	oid 153353
       end
     end
   end

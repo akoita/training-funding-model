@@ -31,8 +31,6 @@ format 221
    end
   
   oid -1
-  ncouples 1
-  key "html dir" value "C:\\dev\\hyperledger\\training-app-uml-models\\diagram-images\\bouml\\profile/"
   imported_project_dir "C:/dev/hyperledger/training-app-uml-models/hlf-app-profile/hlf-app-profile"
   package_ref 128137 // app-profile
 

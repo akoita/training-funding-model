@@ -1,6 +1,6 @@
 format 221
 "app-profile" // hlf-app-profile::app-profile
-  revision 5
+  revision 8
   modified_by 9 "koita"
   // class settings
   
@@ -53,7 +53,7 @@ format 221
     activitydiagramsettings
      end
     oid 128137
-    class 134537 "fabricApp"
+    class 134537 "FabricNetwork"
       visibility package stereotype "stereotype"
       cpp_decl ""
       java_decl ""
@@ -71,26 +71,6 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Package"
       key "stereotypeIconPath" value ""
-      classrelation 134537 // <composition>
-	relation 134537 *---
-	  oid 134537
-	  a role_name "" private
-	    classrelation_ref 134537 // <composition>
-	  b role_name "" private
-	    classrelation_ref 134665 // <composition>
-	oid 134537
-      end
-
-      classrelation 134793 // <composition>
-	relation 134665 *---
-	  oid 134665
-	  a role_name "" private
-	    classrelation_ref 134793 // <composition>
-	  b role_name "" private
-	    classrelation_ref 134921 // <composition>
-	oid 134793
-      end
-
       classrelation 135049 // <composition>
 	relation 134793 *---
 	  oid 134793
@@ -109,6 +89,16 @@ format 221
 	  b role_name "" private
 	    classrelation_ref 142985 // <composition>
 	oid 142857
+      end
+
+      classrelation 160777 // <composition>
+	relation 157833 *---
+	  oid 157833
+	  a role_name "" private
+	    classrelation_ref 160777 // <composition>
+	  b role_name "" private
+	    classrelation_ref 160905 // <composition>
+	oid 160777
       end
     end
 
@@ -130,18 +120,13 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Class Component"
       key "stereotypeIconPath" value ""
-      classrelation 134665 // <composition>
-	relation_ref 134537 // <composition>
-	oid 134665
-      end
-
-      classrelation 142217 // <directional aggregation>
-	relation 141577 o-->
-	  oid 141577
-	  a role_name "" private
-	    classrelation_ref 142217 // <directional aggregation>
-	  b parent class_ref 134793 // Asset
-	oid 142217
+      classrelation 159881 // <generalisation>
+	relation 157321 ---|>
+	  oid 157321
+	  a public
+	    classrelation_ref 159881 // <generalisation>
+	  b parent class_ref 177033 // Concept
+	oid 159881
       end
     end
 
@@ -169,9 +154,22 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Class Component"
       key "stereotypeIconPath" value ""
-      classrelation 134921 // <composition>
-	relation_ref 134665 // <composition>
-	oid 134921
+      classrelation 160009 // <generalisation>
+	relation 157449 ---|>
+	  oid 157449
+	  a public
+	    classrelation_ref 160009 // <generalisation>
+	  b parent class_ref 177033 // Concept
+	oid 160009
+      end
+
+      classrelation 160521 // owner (<unidirectional association>)
+	relation 157705 --->
+	  oid 157705
+	  a role_name "owner" private
+	    classrelation_ref 160521 // owner (<unidirectional association>)
+	  b parent class_ref 134665 // Participant
+	oid 160521
       end
     end
 
@@ -268,6 +266,30 @@ format 221
 	  b role_name "" private
 	    classrelation_ref 146825 // <composition>
 	oid 146697
+      end
+    end
+
+    class 177033 "Concept"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      oid 148617
+      ncouples 6
+      key "stereotypeSet" value ""
+      key "stereotypeCheck" value ""
+      key "stereotypeSetParameters" value ""
+      key "stereotypeCheckParameters" value ""
+      key "stereotypeApplyOn" value "Class Component"
+      key "stereotypeIconPath" value ""
+      classrelation 160905 // <composition>
+	relation_ref 157833 // <composition>
+	oid 160905
       end
     end
   end

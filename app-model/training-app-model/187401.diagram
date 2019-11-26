@@ -2,14 +2,23 @@ format 221
 
 classcanvas 128009 class_ref 149385 // Candidate
   classdiagramsettings member_max_width 0 end
-  xyzwh 451 490 2000 255 105
+  xyzwh 490 482 2000 307 105
 end
 classcanvas 128137 class_ref 169865 // AbstractTrainingAsset
   classdiagramsettings member_max_width 0 end
-  xyz 481 328 2000
+  xyzwh 490 322 2000 307 71
+end
+classcanvas 128393 class_ref 156297 // CandidateContract
+  classdiagramsettings member_max_width 0 end
+  xyzwh 490 664 2006 307 159
 end
 relationcanvas 128265 relation_ref 187145 // <generalisation>
   from ref 128009 z 2001 to ref 128137
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128521 relation_ref 159241 // <dependency>
+  from ref 128393 z 2007 to ref 128009
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
