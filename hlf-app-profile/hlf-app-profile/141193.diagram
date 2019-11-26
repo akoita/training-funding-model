@@ -23,8 +23,8 @@ end
 relationcanvas 128905 relation_ref 142345 // <unidirectional association>
   geometry VHV unfixed
   decenter_end 402
-  from ref 128521 z 2001 to point 1195 605
-  line 136841 z 2001 to point 2005 605
+  from ref 128521 z 2001 to point 1195 606
+  line 136841 z 2001 to point 2005 606
   line 136969 z 2001 to ref 128265
   role_a_pos 2017 466 3000 no_role_b
   multiplicity_a_pos 1991 466 3000 no_multiplicity_b

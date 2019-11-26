@@ -1,6 +1,6 @@
 format 221
 "app-profile" // app-profile
-  revision 4
+  revision 5
   modified_by 9 "koita"
   // class settings
   
@@ -51,7 +51,7 @@ format 221
     
     activitydiagramsettings
      end
-    class 134537 "fabricApp"
+    class 134537 "FabricNetwork"
       visibility package stereotype "stereotype"
       cpp_decl ""
       java_decl ""
@@ -68,22 +68,6 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Package"
       key "stereotypeIconPath" value ""
-      classrelation 134537 // <composition>
-	relation 134537 *---
-	  a role_name "" private
-	    classrelation_ref 134537 // <composition>
-	  b role_name "" private
-	    classrelation_ref 134665 // <composition>
-      end
-
-      classrelation 134793 // <composition>
-	relation 134665 *---
-	  a role_name "" private
-	    classrelation_ref 134793 // <composition>
-	  b role_name "" private
-	    classrelation_ref 134921 // <composition>
-      end
-
       classrelation 135049 // <composition>
 	relation 134793 *---
 	  a role_name "" private
@@ -98,6 +82,14 @@ format 221
 	    classrelation_ref 142857 // <composition>
 	  b role_name "" private
 	    classrelation_ref 142985 // <composition>
+      end
+
+      classrelation 160777 // <composition>
+	relation 157833 *---
+	  a role_name "" private
+	    classrelation_ref 160777 // <composition>
+	  b role_name "" private
+	    classrelation_ref 160905 // <composition>
       end
     end
 
@@ -118,16 +110,13 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Class Component"
       key "stereotypeIconPath" value ""
-      classrelation 134665 // <composition>
-	relation_ref 134537 // <composition>
+      classrelation 159881 // <generalisation>
+	relation 157321 ---|>
+	  a public
+	    classrelation_ref 159881 // <generalisation>
+	  b parent class_ref 148617 // Concept
       end
 
-      classrelation 142217 // <directional aggregation>
-	relation 141577 o-->
-	  a role_name "" private
-	    classrelation_ref 142217 // <directional aggregation>
-	  b parent class_ref 134793 // Asset
-      end
     end
 
     classdiagram 134665 "app-profile-diagramm"
@@ -152,8 +141,18 @@ format 221
       key "stereotypeCheckParameters" value ""
       key "stereotypeApplyOn" value "Class Component"
       key "stereotypeIconPath" value ""
-      classrelation 134921 // <composition>
-	relation_ref 134665 // <composition>
+      classrelation 160009 // <generalisation>
+	relation 157449 ---|>
+	  a public
+	    classrelation_ref 160009 // <generalisation>
+	  b parent class_ref 148617 // Concept
+      end
+
+      classrelation 160521 // owner (<unidirectional association>)
+	relation 157705 --->
+	  a role_name "owner" private
+	    classrelation_ref 160521 // owner (<unidirectional association>)
+	  b parent class_ref 134665 // Participant
       end
     end
 
@@ -236,6 +235,21 @@ format 221
 	    classrelation_ref 146697 // orderer (<composition>)
 	  b role_name "" private
 	    classrelation_ref 146825 // <composition>
+      end
+    end
+
+    class 148617 "Concept"
+      visibility package stereotype "stereotype"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 160905 // <composition>
+	relation_ref 157833 // <composition>
       end
     end
   end
