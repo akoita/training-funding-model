@@ -2,24 +2,44 @@ format 221
 
 classcanvas 128009 class_ref 169737 // AbstractTrainingConceptModel
   classdiagramsettings member_max_width 0 end
-  xyz 281 173 2000
+  xyzwh 325 98 2000 415 59
 end
 classcanvas 128137 class_ref 148873 // TrainingAppLifecycleStatus
   classdiagramsettings member_max_width 0 end
-  xyz 870 146 2000
+  xyz 887 87 2000
 end
 classcanvas 128521 class_ref 169865 // AbstractTrainingAsset
   classdiagramsettings member_max_width 0 end
-  xyz 315 300 2000
+  xyzwh 309 330 2000 187 67
+end
+classcanvas 128777 class_ref 170121 // AbstractTrainingParticipantModel
+  classdiagramsettings member_max_width 0 end
+  xyz 743 313 2006
+end
+packagecanvas 129033 
+  package_ref 148745 // participant-cc
+    xyzwh 619 259 2000 511 223
 end
 relationcanvas 128393 relation_ref 179465 // <unidirectional association>
   from ref 128009 z 2001 to ref 128137
-  role_a_pos 818 173 3000 no_role_b
+  role_a_pos 835 110 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 128649 relation_ref 179593 // <generalisation>
+  decenter_end 224
   from ref 128521 z 2001 to ref 128009
   no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128905 relation_ref 179849 // <generalisation>
+  decenter_end 755
+  from ref 128777 z 2007 to ref 128009
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129161 relation_ref 187401 // <unidirectional association>
+  from ref 128521 z 2007 to ref 128777
+  role_a_pos 677 339 3000 no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 end

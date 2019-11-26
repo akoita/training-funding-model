@@ -1,6 +1,6 @@
 format 221
 "trainingOffer-cc" // trainingFundingApp::trainingOffer-cc
-  revision 1
+  revision 2
   modified_by 9 "koita"
   // class settings
   
@@ -30,4 +30,223 @@ format 221
   activitydiagramsettings
    end
   
+  classview 161289 "trainingOffer-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 187529 "trainingOffer-diagramm"
+      classdiagramsettings member_max_width 0 end
+      size A2
+    end
+
+    class 149129 "TrainingDomain"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129289 "SoftwareEngineering"
+	public type class_ref 149129 // TrainingDomain
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129417 "Education"
+	public type class_ref 149129 // TrainingDomain
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129545 "Health"
+	public type class_ref 149129 // TrainingDomain
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154633 // <composition>
+	relation_ref 151433 // <composition>
+      end
+
+      attribute 151433 "Others"
+	public type class_ref 149129 // TrainingDomain
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 148745 "TrainingOfferLevel"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 151305 "Beginner"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128265 "Intermediate"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128393 "Advanced"
+	public type class_ref 148745 // TrainingOfferLevel
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154377 // <composition>
+	relation_ref 151305 // <composition>
+      end
+    end
+
+    class 148617 "TrainingOffer"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129673 "title"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129801 "description"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 154249 // Level (<composition>)
+	relation 151305 *---
+	  a role_name "Level" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154249 // Level (<composition>)
+	  b role_name "" private
+	    classrelation_ref 154377 // <composition>
+      end
+
+      classrelation 154505 // domain (<composition>)
+	relation 151433 *---
+	  a role_name "domain" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154505 // domain (<composition>)
+	  b role_name "" private
+	    classrelation_ref 154633 // <composition>
+      end
+
+      classrelation 191497 // <generalisation>
+	relation 187017 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 191497 // <generalisation>
+	  b parent class_ref 169865 // AbstractTrainingAsset
+      end
+    end
+  end
 end

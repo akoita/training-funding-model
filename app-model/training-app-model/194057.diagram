@@ -1,0 +1,53 @@
+format 221
+
+classcanvas 128009 class_ref 149257 // Training
+  classdiagramsettings member_max_width 0 end
+  xyzwh 639 260 2000 339 111
+end
+classcanvas 128137 class_ref 148617 // TrainingOffer
+  classdiagramsettings member_max_width 0 end
+  xyzwh 115 260 3005 371 111
+end
+classcanvas 128393 class_ref 169865 // AbstractTrainingAsset
+  classdiagramsettings member_max_width 0 end
+  xyz 704 35 3011
+end
+classcanvas 128777 class_ref 149513 // TrainingProcessStatus
+  classdiagramsettings member_max_width 0 end
+  xyz 718 477 3005
+end
+classcanvas 129161 class_ref 149385 // Candidate
+  classdiagramsettings member_max_width 0 end
+  xyzwh 1145 256 3017 365 111
+end
+relationcanvas 128265 relation_ref 151689 // <unidirectional association>
+  from ref 128009 z 3006 to ref 128137
+  role_a_pos 495 291 3000 no_role_b
+  multiplicity_a_pos 495 324 3000 no_multiplicity_b
+end
+relationcanvas 128521 relation_ref 187017 // <generalisation>
+  from ref 128137 z 3012 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128649 relation_ref 187273 // <generalisation>
+  from ref 128009 z 3012 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 128905 relation_ref 151945 // <composition>
+  from ref 128009 z 3006 to ref 128777
+  role_a_pos 820 452 3000 no_role_b
+  multiplicity_a_pos 791 452 3000 no_multiplicity_b
+end
+relationcanvas 129289 relation_ref 187145 // <generalisation>
+  from ref 129161 z 3018 to ref 128393
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129417 relation_ref 152073 // <unidirectional association>
+  from ref 128009 z 3018 to ref 129161
+  role_a_pos 1052 288 3000 no_role_b
+  multiplicity_a_pos 1125 321 3000 no_multiplicity_b
+end
+end

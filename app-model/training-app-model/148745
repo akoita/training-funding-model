@@ -1,6 +1,6 @@
 format 221
 "participant-cc" // trainingFundingApp::participant-cc
-  revision 1
+  revision 2
   modified_by 9 "koita"
   // class settings
   
@@ -94,7 +94,7 @@ ${members}}
     end
 
     class 170121 "AbstractTrainingParticipantModel"
-      visibility package 
+      visibility package stereotype "app-profile:Participant"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -151,7 +151,7 @@ ${members}}
     end
 
     class 170249 "CareerAdvisorParticipant"
-      visibility package 
+      visibility package stereotype "app-profile:Participant"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -172,7 +172,7 @@ ${members}}
     end
 
     class 170377 "TrainingCompanyParticipant"
-      visibility package 
+      visibility package stereotype "app-profile:Participant"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -193,7 +193,7 @@ ${members}}
     end
 
     class 170505 "InvestorParticipant"
-      visibility package 
+      visibility package stereotype "app-profile:Participant"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}

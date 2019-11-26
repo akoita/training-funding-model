@@ -1,24 +1,43 @@
-window_sizes 3840 2004 605 3228 1774 168
+window_sizes 2880 1526 738 2135 1464 0
 
 diagrams
-  classdiagram_ref 128137 // package-diagram
-    1742 2284 100 A1 0 0
-  active  classdiagram_ref 141193 // deployment-profile-diagramm
-    2582 1419 100 A1 60 0
+  classdiagram_ref 187529 // trainingOffer-diagramm
+    1708 1171 100 A2 0 0
+  classdiagram_ref 194057 // training-diagramm
+    1708 1171 100 A2 0 0
+  classdiagram_ref 187401 // candidate-diagramm
+    1708 1171 100 A2 0 0
+  classdiagram_ref 128137 // organization-viewe-diagram
+    1708 1171 100 A1 0 0
+  classdiagram_ref 194185 // assets-diagramm2
+    1708 1171 100 A2 0 0
+  classdiagram_ref 187145 // common-diagramm
+    116 110 100 A2 0 0
+  active  classdiagram_ref 134665 // app-profile-diagramm
+    2135 1464 96 A1 0 0
 end
 show_stereotypes
 marked
   deploymentnode_ref 128265 // Investor.Peer
+  class_ref 148745 // TrainingOfferLevel
+  class_ref 149257 // Training
 end
-selected artifact_ref 128009 // TrainingChannel
+selected classdiagram_ref 134665 // app-profile-diagramm
 open
-  classview_ref 128265 // package-view
+  classdiagram_ref 128137 // organization-viewe-diagram
   classview_ref 141193 // asset-view
-  deploymentview_ref 128009 // deployment-view
   
-package_ref 141449 // TrainingCompnay
+  package_ref 141449 // TrainingCompnay
   
-package_ref 141961 // BlockchainCoordinator
-  class_ref 141705 // Channel
+  package_ref 141961 // BlockchainCoordinator
+  classdiagram_ref 187401 // candidate-diagramm
+  class_ref 149385 // Candidate
+  classview_ref 160777 // common-view
+  classview_ref 161033 // participant-view
+  classview_ref 167817 // training-view
+  class_ref 148617 // TrainingOffer
+  classview_ref 128137 // app-profile-view
+  
+  package_ref 134921 // deployment-profile
 end
 end

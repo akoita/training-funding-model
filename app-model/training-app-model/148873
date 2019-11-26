@@ -1,6 +1,6 @@
 format 221
 "training-cc" // trainingFundingApp::training-cc
-  revision 1
+  revision 2
   modified_by 9 "koita"
   // class settings
   
@@ -30,4 +30,190 @@ format 221
   activitydiagramsettings
    end
   
+  classview 167817 "training-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 194057 "training-diagramm"
+      classdiagramsettings member_max_width 0 end
+      size A2
+    end
+
+    class 149513 "TrainingProcessStatus"
+      visibility package stereotype "enum"
+      cpp_decl "${comment}enum ${name} {
+${items}};
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl "${comment}${visibility}final class ${name} {
+${items}}
+"
+      python_2_2 python_decl "class ${name}:
+${docstring}${members}
+"
+      idl_decl "${comment}enum ${name} {
+${items}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 143625 "NotSubmitted"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143753 "Submitted"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 143881 "Accecpted"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 144009 "Funded"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130313 "InProgress"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129929 "Succeeded"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130057 "Failed"
+	public type class_ref 149513 // TrainingProcessStatus
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 155529 // <composition>
+	relation_ref 151945 // <composition>
+      end
+    end
+
+    class 149257 "Training"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 154889 // trainingOfferId (<unidirectional association>)
+	relation 151689 --->
+	  a role_name "trainingOfferId" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154889 // trainingOfferId (<unidirectional association>)
+	  b parent class_ref 148617 // TrainingOffer
+      end
+
+      classrelation 155401 // trainingProcessStatus (<composition>)
+	relation 151945 *---
+	  a role_name "trainingProcessStatus" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 155401 // trainingProcessStatus (<composition>)
+	  b role_name "" private
+	    classrelation_ref 155529 // <composition>
+      end
+
+      classrelation 155657 // candidateId (<unidirectional association>)
+	relation 152073 --->
+	  a role_name "candidateId" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 155657 // candidateId (<unidirectional association>)
+	  b parent class_ref 149385 // Candidate
+      end
+
+      classrelation 191753 // <generalisation>
+	relation 187273 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 191753 // <generalisation>
+	  b parent class_ref 169865 // AbstractTrainingAsset
+      end
+    end
+  end
 end

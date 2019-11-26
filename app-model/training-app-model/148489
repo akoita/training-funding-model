@@ -1,6 +1,6 @@
 format 221
 "candidate-cc" // trainingFundingApp::candidate-cc
-  revision 1
+  revision 2
   modified_by 9 "koita"
   // class settings
   
@@ -30,4 +30,83 @@ format 221
   activitydiagramsettings
    end
   
+  classview 161161 "candidate-view"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 187401 "candidate-diagramm"
+      classdiagramsettings member_max_width 0 end
+      size A2
+    end
+
+    class 149385 "Candidate"
+      visibility package stereotype "app-profile:Asset"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130441 "firstName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130569 "lastName"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 191625 // <generalisation>
+	relation 187145 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 191625 // <generalisation>
+	  b parent class_ref 169865 // AbstractTrainingAsset
+      end
+    end
+  end
 end

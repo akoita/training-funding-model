@@ -1,6 +1,6 @@
 format 221
 "common-cc" // trainingFundingApp::common-cc
-  revision 1
+  revision 2
   modified_by 9 "koita"
   // class settings
   
@@ -93,9 +93,6 @@ ${items}};
 	MysqlColumn
       end
 
-      classrelation 154121 // <composition>
-	relation_ref 151177 // <composition>
-      end
     end
 
     classdiagram 187145 "common-diagramm"
@@ -138,7 +135,7 @@ ${members}}
     end
 
     class 169865 "AbstractTrainingAsset"
-      visibility package 
+      visibility package stereotype "app-profile:Asset"
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -155,6 +152,15 @@ ${members}}
 	    java "${type}"
 	    classrelation_ref 183689 // <generalisation>
 	  b parent class_ref 169737 // AbstractTrainingConceptModel
+      end
+
+      classrelation 191881 // ownerId (<unidirectional association>)
+	relation 187401 --->
+	  a role_name "ownerId" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 191881 // ownerId (<unidirectional association>)
+	  b parent class_ref 170121 // AbstractTrainingParticipantModel
       end
     end
   end
