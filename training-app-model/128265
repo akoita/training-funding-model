@@ -52,7 +52,7 @@ format 221
     
     activitydiagramsettings
      end
-    classdiagram 128137 "organization-viewe-diagram"
+    classdiagram 128137 "organization-view-diagram"
       classdiagramsettings member_max_width 0 end
       size A1
     end
